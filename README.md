@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Clã Verder Vamos laaaa!
 
 # Frontend Aplicação para o Projeto Hcodelab - Fase 6
@@ -34,3 +35,7 @@ npm run dev
 ```
 
 O projeto esta configurado para rodar na porta 3000 no localhost, não esqueca, o arquivo package.json é responsavel pelas configurações e dependencias do nosso projeto.
+=======
+# projetoacademia
+Projeto Fase 6 hcodelab, Vamos desenvolver o site do Zero apenas com as imagens e logo fornecidos pelo criente.
+>>>>>>> d93df62eaa6c50297a16154828e7e49370cc6965
