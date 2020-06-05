@@ -5,7 +5,7 @@ export default () => {
         <>
             <div className={styles["headerfundo"]}>
                 
-                <img className={styles["logo"]} src="/Logo/Fitness.svg" />
+                <a href="/"><img className={styles["logo"]} src="assets/Logo/Fitness.svg" id="logo" alt="Logo" /></a>
                 
                 <ul>
                     <li></li>

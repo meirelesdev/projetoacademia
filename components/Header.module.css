@@ -1,11 +1,13 @@
 .headerfundo {
-    background-color: black;
-    min-width: 100%;
+    background-image: linear-gradient( black, black, black, black, black,transparent);
     width: 100%;
-    height: 120px;
+    height: 220px;
+    position: relative;
 }
 
 .logo {
-    width: 100px;
-    height: 200px;
+    width: 170px;
+    z-index: 80;
+    margin-left: 8%;
+    margin-top: 10px;
 }
