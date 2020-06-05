@@ -1,0 +1,37 @@
+.thumb {
+    width: 100%;
+    height: 300px;
+    padding: 20px;
+    margin: 0;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: white;
+}
+.thumb h3 {
+    font-size: 28px;
+}
+.thumb button {
+    border: none;
+    border-radius: 3px;
+    width: 40%;
+    color: white;
+    font-weight: bold;
+    background-color: #f15000;
+    padding: 15px 20px;
+}
+
+/* Apartir deste tamanho */
+@media (min-width: 576px) {
+
+
+}
+
+@media (min-width: 992px) {
+
+}
+
+@media (min-width: 1200px) {
+
+}
