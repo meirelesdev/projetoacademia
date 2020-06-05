@@ -1,0 +1,11 @@
+.headerfundo {
+    background-color: black;
+    min-width: 100%;
+    width: 100%;
+    height: 120px;
+}
+
+.logo {
+    width: 100px;
+    height: 200px;
+}
