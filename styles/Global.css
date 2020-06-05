@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'calibrip';
+    font-style: normal;
+    font-weight: 300;
+    src: url('/assets/fonts/calibri.ttf') format('truetype');
+}
+
 * {
     box-sizing: border-box;
 }

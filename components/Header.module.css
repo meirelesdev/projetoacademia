@@ -23,7 +23,7 @@
 .navbar {
     list-style: none;
     color: red;
-    font-size: 25px;
+    font-size: 20px;
     width: 100%;
     position: absolute;
     top: 95px;
@@ -37,6 +37,7 @@
 }
 
 .navbar a {
+    font-family: 'calibrip';
     text-decoration: none;
     color: white;
 }
@@ -67,7 +68,7 @@
 
 }
 
-@media (max-width: 1500px) {
+@media (max-width: 1400px) {
     .logo {
         width: 120px;
         z-index: 80;
@@ -81,9 +82,9 @@
     } 
 }
 
-@media (min-width: 1501px) {
+@media (min-width: 1401px) {
     .navbar li{
-        padding-left: 2em;
-        padding-right: 3em;
+        padding-left: 2.5em;
+        padding-right: 3.5em;
     }
 }
