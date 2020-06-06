@@ -111,6 +111,11 @@
     height: 50px;
 }
 
+#iconsocial {
+    width: 50px;
+    height: 50px;
+}
+
 .textologo {
     display: flex;
     align-items: center;
@@ -137,4 +142,32 @@
 
 .logorodape {
     width: 85px;
+}
+
+@media (max-width: 1400px) {
+    .fundogray {
+        flex-direction: column;
+    }
+
+    .ulbuttonsocial {
+        margin-left: 25px;
+    }
+
+    .conteudologo {
+        margin-left: 25px;
+    }
+}
+
+@media (max-width: 500px) {
+    #iconsocial {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media (max-width: 400px) {
+    #iconsocial {
+        width: 25px;
+        height: 25px;
+    }
 }
