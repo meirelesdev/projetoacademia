@@ -1,0 +1,140 @@
+.fundogray {
+    background-color: #242424;
+    font-family: 'calibrip';
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 0px;
+}
+
+.titulo {
+    font-family: 'calibripnegrito';
+    color: orange;
+    margin-block-start: 0;
+}
+
+.subtitulo {
+    font-family: 'calibripnegrito';
+    font-size: 20px;
+    color: #f15000;
+}
+
+.conteudo {
+    font-size: 20px;
+    color: white;
+}
+
+.navinferior {
+    padding-right: 30px;
+}
+
+.linksuteis {
+    display: flex;
+    flex-direction: column;
+    margin-left: 25px;
+}
+
+.linkcontato {
+    display: flex;
+}
+
+.conteudologo {
+    font-size: 14px;
+    color: white;
+    padding-right: 20px;
+}
+
+.listalinks {
+    margin-left: 0;
+    font-size: 20px;
+    list-style: none;
+    padding-inline-start: 0;
+}
+
+.listalinks li a {
+    text-decoration: none;
+    color: white;
+}
+
+.listalinks li {
+    padding-top: 5px;
+}
+
+.ulbuttonsocial {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.listasociais {
+    margin-left: 0;
+    font-size: 25px;
+    list-style: none;
+    padding-inline-start: 0;
+}
+
+.listasociais li a {
+    text-decoration: none;
+    color: #f15000;
+}
+
+.listasociais li {
+    display: inline;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+}
+
+.botaosocial {
+	background-color:#030303;
+	border-radius:10px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ff6f00;
+	font-family:Arial;
+	font-size:17px;
+	padding:5px 9px;
+	text-decoration:none;
+}
+
+.botaosocial:hover {
+	background-color:#303030;
+}
+
+.botaosocial:active {
+	position:relative;
+	top:1px;
+}
+
+
+#icon {
+    width: 50px;
+    height: 50px;
+}
+
+.textologo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 45px;
+    text-align: end;
+}
+
+.fundopreto {
+    background-color: black;
+    width: 100%;
+    height: 50px;
+}
+
+.fundopreto h1 {
+    font-size: 14px;
+    color: white;
+    font-family: 'calibrip';
+    text-align: center;
+    padding-top: 20px;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.logorodape {
+    width: 85px;
+}

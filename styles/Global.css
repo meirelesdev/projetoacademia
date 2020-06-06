@@ -5,6 +5,13 @@
     src: url('/assets/fonts/calibri.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'calibripnegrito';
+    font-style: normal;
+    font-weight: 300;
+    src: url('/assets/fonts/calibribold.ttf') format('truetype');
+}
+
 * {
     box-sizing: border-box;
 }
