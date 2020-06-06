@@ -5,6 +5,8 @@ export default () => {
     return (
         <>
             <div className={styles["fundogray"]}>
+
+            <div className={styles["quadrado"]}></div>
                 
                 <div className={styles["linksuteis"]}>
                     <h1 className={styles["titulo"]}>Links Úteis:</h1>

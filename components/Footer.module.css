@@ -4,12 +4,23 @@
     display: flex;
     justify-content: space-between;
     padding: 50px 0px;
+    position: relative;
 }
 
 .titulo {
     font-family: 'calibripnegrito';
-    color: orange;
+    color: rgb(255, 197, 37);
     margin-block-start: 0;
+    padding-left: 55px;
+}
+
+.quadrado {
+    width: 40px;
+    height: 50px;
+    background-color: rgb(255, 197, 37);
+    position: absolute;
+    top: 28px;
+    left: 25px;
 }
 
 .subtitulo {
@@ -42,6 +53,7 @@
     color: white;
     padding-right: 20px;
 }
+
 
 .listalinks {
     margin-left: 0;
@@ -79,20 +91,18 @@
 
 .listasociais li {
     display: inline;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-right: 8px;
     padding-top: 5px;
 }
 
 .botaosocial {
 	background-color:#030303;
-	border-radius:10px;
 	display:inline-block;
 	cursor:pointer;
 	color:#ff6f00;
 	font-family:Arial;
 	font-size:17px;
-	padding:5px 9px;
+	padding:9px 13px;
 	text-decoration:none;
 }
 
@@ -112,8 +122,8 @@
 }
 
 #iconsocial {
-    width: 50px;
-    height: 50px;
+    width: 35px;
+    height: 35px;
 }
 
 .textologo {
@@ -122,12 +132,13 @@
     justify-content: space-between;
     margin-right: 45px;
     text-align: end;
+    padding-top: 160px;
 }
 
 .fundopreto {
     background-color: black;
     width: 100%;
-    height: 50px;
+    height: 90px;
 }
 
 .fundopreto h1 {
@@ -135,7 +146,7 @@
     color: white;
     font-family: 'calibrip';
     text-align: center;
-    padding-top: 20px;
+    padding-top: 40px;
     margin-block-start: 0;
     margin-block-end: 0;
 }
@@ -149,12 +160,21 @@
         flex-direction: column;
     }
 
+    .linkcontato {
+        justify-content: center;
+    }
+
     .ulbuttonsocial {
-        margin-left: 25px;
+        text-align: center;
     }
 
     .conteudologo {
         margin-left: 25px;
+    }
+
+    .textologo {
+        padding-top: 35px;
+        justify-content: center;
     }
 }
 
@@ -165,9 +185,16 @@
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 410px) {
     #iconsocial {
-        width: 25px;
-        height: 25px;
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 322px) {
+    #iconsocial {
+        width: 10px;
+        height: 10px;
     }
 }
