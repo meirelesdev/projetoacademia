@@ -1,13 +1,19 @@
 import Head from 'next/head'
+import Header from '../components/Header'
+import App from 'next/app'
 import Sectionblog from '../components/Sectionblog'
+import Link from 'next/link'
+import Footer from '../components/Footer'
+
 
 export default function Index() {
     return(
         <>
-          <h1>Bem Vindo ao projeto Hcodelab Fase 6</h1>
-          <h2>Tema do projeto: Academia</h2>
-          <Sectionblog />
-             
+            <Header/>
+            <Head />
+                
+            <Sectionblog />
+            <Footer/>
         </>
     )
 }
