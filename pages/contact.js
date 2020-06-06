@@ -1,5 +1,5 @@
-//import Header from '../components/Header';
-//import Footer from '../components/Footer';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 import Input from '../components/Input'
 import Textarea from '../components/Textarea'
 import styles from '../components/Contact.module.css';
@@ -20,7 +20,8 @@ import styles from '../components/Contact.module.css';
 export default function Contact() {
     return(
         <>
-        
+        <Header/>
+    
         <h1 className={styles.teste}>Contatos</h1>
         
         <form className={styles.form}>
@@ -34,7 +35,7 @@ export default function Contact() {
             {/* Esperar ter o componente Button pra colocar aqui */}
         </form>
         
-        
+        <Footer/>
         </>
     )
 }
