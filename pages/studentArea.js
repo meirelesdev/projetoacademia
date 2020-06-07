@@ -1,13 +1,14 @@
+import Head from 'next/head'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
-import Head from 'next/head'
+import Button from '../components/Button'
 
 
 export default function Studentarea() {
     return (
         <>
-            <Header />
             <Head />
+            <Header />
 
             <section>
                 <div className='formularioaluno'></div>
@@ -24,7 +25,7 @@ export default function Studentarea() {
                             </div>
                         </div>
                         <div className='botaoenviar'>
-                            <button type="submit">Entrar</button>
+                            <Button text="Entrar"/>
                             <a href="#">Esqueci a senha</a>
                         </div>
                     </div>
