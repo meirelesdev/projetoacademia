@@ -22,3 +22,7 @@ body {
     background-color: white;
     scroll-behavior: smooth;
 }
+/* Editar depois so para ficar visualmente melhor a home*/
+section {
+    height: 100vh;
+}
