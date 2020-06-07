@@ -48,12 +48,12 @@ export default () => {
                 <div className={styles["ulbuttonsocial"]} >
                     <h1 className={styles["subtitulo"]}>Redes Sociais:</h1>
                     <ul className={styles["listasociais"]}>
-                        <li><a href="https://pt-br.facebook.com/" class={styles["botaosocial"]}><img src="assets/Icon/face.svg" id={styles["iconsocial"]} /></a></li>
-                        <li><a href="https://twitter.com/" class={styles["botaosocial"]}><img src="assets/Icon/twitter.svg" id={styles["iconsocial"]} /></a></li>
-                        <li><a href="https://br.pinterest.com/" class={styles["botaosocial"]}><img src="assets/Icon/pinterest.svg" id={styles["iconsocial"]} /></a></li>
-                        <li><a href="https://br.linkedin.com/" class={styles["botaosocial"]}><img src="assets/Icon/linkedin.svg" id={styles["iconsocial"]} /></a></li>
-                        <li><a href="https://www.youtube.com/" class={styles["botaosocial"]}><img src="assets/Icon/youtube.svg" id={styles["iconsocial"]} /></a></li>
-                        <li><a href="https://www.instagram.com/" class={styles["botaosocial"]}><img src="assets/Icon/insta.svg" id={styles["iconsocial"]} /></a></li>
+                        <li><a href="https://pt-br.facebook.com/" className={styles["botaosocial"]}><img src="assets/Icon/face.svg" id={styles["iconsocial"]} /></a></li>
+                        <li><a href="https://twitter.com/" className={styles["botaosocial"]}><img src="assets/Icon/twitter.svg" id={styles["iconsocial"]} /></a></li>
+                        <li><a href="https://br.pinterest.com/" className={styles["botaosocial"]}><img src="assets/Icon/pinterest.svg" id={styles["iconsocial"]} /></a></li>
+                        <li><a href="https://br.linkedin.com/" className={styles["botaosocial"]}><img src="assets/Icon/linkedin.svg" id={styles["iconsocial"]} /></a></li>
+                        <li><a href="https://www.youtube.com/" className={styles["botaosocial"]}><img src="assets/Icon/youtube.svg" id={styles["iconsocial"]} /></a></li>
+                        <li><a href="https://www.instagram.com/" className={styles["botaosocial"]}><img src="assets/Icon/insta.svg" id={styles["iconsocial"]} /></a></li>
                     </ul>
                 </div>
 
