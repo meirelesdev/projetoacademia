@@ -12,6 +12,7 @@
     color: rgb(255, 197, 37);
     margin-block-start: 0;
     padding-left: 55px;
+    padding-top: 15px;
 }
 
 .quadrado {
@@ -19,7 +20,7 @@
     height: 50px;
     background-color: rgb(255, 197, 37);
     position: absolute;
-    top: 28px;
+    top: 42px;
     left: 25px;
 }
 
@@ -36,6 +37,11 @@
 
 .navinferior {
     padding-right: 30px;
+}
+
+#iconseta {
+    width: 13px;
+    margin-right: 5px;
 }
 
 .linksuteis {
@@ -68,13 +74,14 @@
 }
 
 .listalinks li {
-    padding-top: 5px;
+    padding-top: 6.5px;
 }
 
 .ulbuttonsocial {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-bottom: 50px;
 }
 
 .listasociais {
@@ -196,5 +203,9 @@
     #iconsocial {
         width: 10px;
         height: 10px;
+    }
+
+    #iconseta {
+        display: none;
     }
 }

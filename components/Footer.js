@@ -15,12 +15,12 @@ export default () => {
                         <div className={styles["navinferior"]}>
                             <h1 className={styles["subtitulo"]}>Links:</h1>
                             <ul className={styles["listalinks"]}>
-                                <li><Link href="/" ><a>Home</a></Link></li>
-                                <li><Link href="/" ><a>Sobre nós</a></Link></li>
-                                <li><Link href="/" ><a>Galeria</a></Link></li>
-                                <li><Link href="/" ><a>Planos</a></Link></li>
-                                <li><Link href="/" ><a>Corporativo</a></Link></li>
-                                <li><Link href="/" ><a>Contato</a></Link></li>
+                                <li><Link href="/" ><a><img src="assets/Icon/seta.svg" id={styles["iconseta"]} />Home</a></Link></li>
+                                <li><Link href="/sobrenos" ><a><img src="assets/Icon/seta.svg" id={styles["iconseta"]} />Sobre nós</a></Link></li>
+                                <li><Link href="/" ><a><img src="assets/Icon/seta.svg" id={styles["iconseta"]} />Galeria</a></Link></li>
+                                <li><Link href="/planos" ><a><img src="assets/Icon/seta.svg" id={styles["iconseta"]} />Planos</a></Link></li>
+                                <li><Link href="/" ><a><img src="assets/Icon/seta.svg" id={styles["iconseta"]} />Corporativo</a></Link></li>
+                                <li><Link href="/" ><a><img src="assets/Icon/seta.svg" id={styles["iconseta"]} />Contato</a></Link></li>
                             </ul>
                         </div>
 
