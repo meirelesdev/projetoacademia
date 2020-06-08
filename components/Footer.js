@@ -17,7 +17,7 @@ export default () => {
                             <ul className={styles["listalinks"]}>
                                 <li><Link href="/" ><a><img src="assets/Icon/seta.svg" id={styles["iconseta"]} />Home</a></Link></li>
                                 <li><Link href="/sobrenos" ><a><img src="assets/Icon/seta.svg" id={styles["iconseta"]} />Sobre nós</a></Link></li>
-                                <li><Link href="/" ><a><img src="assets/Icon/seta.svg" id={styles["iconseta"]} />Galeria</a></Link></li>
+                                <li><Link href="/gallery" ><a><img src="assets/Icon/seta.svg" id={styles["iconseta"]} />Galeria</a></Link></li>
                                 <li><Link href="/planos" ><a><img src="assets/Icon/seta.svg" id={styles["iconseta"]} />Planos</a></Link></li>
                                 <li><Link href="/" ><a><img src="assets/Icon/seta.svg" id={styles["iconseta"]} />Blog</a></Link></li>
                                 <li><Link href="/contact" ><a><img src="assets/Icon/seta.svg" id={styles["iconseta"]} />Contato</a></Link></li>
