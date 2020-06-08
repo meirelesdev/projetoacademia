@@ -1,4 +1,5 @@
 import styles from './Planos.module.css'
+import CompImg from './CompImg'
 export default function Planos(props) {
     return (
         <div className={styles.pagina}>
@@ -7,8 +8,8 @@ export default function Planos(props) {
                             
                             <div className={styles.quadrado}></div>
                             <h1>Tabela de planos:</h1>
-
-                        <img src="assets/Images/bannerplanos.png" alt="banner" id={styles.bannermaior}/>
+  
+                      <CompImg src="assets/Images/bannerplanos.png" alt="banner" id={styles.bannermaior} />
                     </div>
 
                     <div className={styles.textopropaganda}>

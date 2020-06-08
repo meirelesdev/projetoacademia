@@ -21,9 +21,9 @@ export default () => {
                 <ul className={styles["navbar"]} >
                     <li><Link href="/" ><a>Home</a></Link></li>
                     <li><Link href="/sobrenos" ><a>Sobre nós</a></Link></li>
-                    <li><Link href="/" ><a>Galeria</a></Link></li>
+                    <li><Link href="/gallery" ><a>Galeria</a></Link></li>
                     <li><Link href="/planos" ><a>Planos</a></Link></li>
-                    <li><Link href="/" ><a>Blog</a></Link></li>
+                    <li><Link href="/blog" ><a>Blog</a></Link></li>
                     <li><Link href="/contact" ><a>Contato</a></Link></li>
                 </ul>
 
