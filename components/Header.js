@@ -24,7 +24,7 @@ export default () => {
                     <li><Link href="/" ><a>Galeria</a></Link></li>
                     <li><Link href="/planos" ><a>Planos</a></Link></li>
                     <li><Link href="/" ><a>Blog</a></Link></li>
-                    <li><Link href="/" ><a>Contato</a></Link></li>
+                    <li><Link href="/contact" ><a>Contato</a></Link></li>
                 </ul>
 
             </div><a></a>

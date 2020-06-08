@@ -77,6 +77,10 @@
         position: absolute;
     }
 
+    .headerfundo {
+        height: 120px;
+    }
+
     .navbar{
         display: none;
     } 
