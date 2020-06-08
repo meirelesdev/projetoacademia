@@ -6,7 +6,8 @@ export default () => {
     return (
         <>
             <Header/>
-            
+                <section>
+                </section>
             <Footer/>
         </>
     )

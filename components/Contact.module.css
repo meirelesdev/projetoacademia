@@ -1,10 +1,25 @@
-
-
+/* 
+15/06
+9:00
+ao lado do hospital infantil
+ */
 
 .teste {
     color:black;
 }
+.container{
+    display: flex;
 
+}
+.container div{
+    width: 100%;
+    max-width: 1200px;
+}
+.container .imgContact{
+    background-image: url('/assets/Images/banner-google-maps.png');
+    background-size: cover;
+    width:100%;
+}
 
 /* 
 .page {
