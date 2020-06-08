@@ -1,6 +1,7 @@
 import Footer from '../components/Footer'
 import Header from '../components/Header'
 import Head from 'next/head'
+import styles from '../components/Studentarea.module.css'
 
 export default function Studentareatable() {
     return (
@@ -13,7 +14,7 @@ export default function Studentareatable() {
                 <li>Nome do Aluno: Igor Henrique Mondoni</li>
                 <li>Plano: Semestral B</li>
             </ul>
-            <table style="width:100%">
+            <table>
                 <tr>
                     <th>ID do treino</th>
                     <th>Treino</th>

@@ -1,0 +1,30 @@
+.container{
+    width: auto;
+    height: 100%;
+    background: black;
+    display: flex;
+    justify-content: center;
+    padding: 15px 0 15px 0;
+    color: white;
+}
+
+.container_input {
+    color: white;
+}
+
+.mid_input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 4px solid #cde81a;
+    border-radius: 40px;
+    padding: 10px;
+}
+
+button.mid_input{
+    border: none;
+}
+.input_student{
+    background: transparent;
+    border: none;
+}
