@@ -1,0 +1,21 @@
+.container{
+    width: auto;
+    height: 100%;
+    background: black;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+.mid_input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: solid 4px #FFD700;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+button.mid_input{
+    border: none;
+}
