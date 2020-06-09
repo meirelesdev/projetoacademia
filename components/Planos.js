@@ -14,6 +14,8 @@ export default function Planos(props) {
                         <CompImg src="assets/Images/bannerplanos.png" alt="banner" id={styles.bannermaior} />
                     </div>
 
+                    {props.children}
+
                     <div className={styles.textopropaganda}>
                         <p>
                             Nossa marca de Fitness é um exelente programa que enfatiza a importancia da mecânica, consistência e intensidade (nessa ordem).<br/>

@@ -9,8 +9,7 @@ export default function Gallery(props) {
     return(
         <>
             <Header />
-                    <Banner fotoBanner="assets/Images/banner-gallery.jpg" titleBanner="Galeria de Fotos"/>
-                    
+                <Banner fotoBanner="assets/Images/banner-gallery.jpg" titleBanner="Galeria de Fotos"/>
             <Footer />
         </>
     )
