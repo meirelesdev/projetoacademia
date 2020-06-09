@@ -111,7 +111,6 @@
 .localContact .phoneContat ul li a {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
     font-size: 1.2em;
     color: #ff5100;
     text-decoration: none;
@@ -119,6 +118,7 @@
 
 .localContact .phoneContat ul li img {
     width: 30px;
+    margin-right: 5px;
 }
 
 
