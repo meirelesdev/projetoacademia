@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export default () => {
     return (
-        <>
+        <header>
             <Link  href="/">
                 <a>
                     <img className={styles["logo"]} src="assets/Logo/Fitness.svg" id="logo" alt="Logo" />
@@ -26,8 +26,7 @@ export default () => {
                     <li><Link href="/blog" ><a>Blog</a></Link></li>
                     <li><Link href="/contact" ><a>Contato</a></Link></li>
                 </ul>
-
-            </div><a></a>
-        </>
+            </div>
+        </header>
     )
 }

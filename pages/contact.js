@@ -4,6 +4,7 @@ import Input from '../components/Input'
 import Textarea from '../components/Textarea'
 import Button from '../components/Button'
 import styles from '../components/Contact.module.css'
+import Banner from '../components/Banner'
 
 
 /* Idéia da estrutura final
@@ -22,7 +23,7 @@ export default function Contact() {
     return(
         <>
         <Header/>
-        <div className={styles.bannerContact}></div>
+        <Banner fotoBanner="assets/Images/banner-google-maps.jpg" titleBanner="Contato" />  
         <section className={styles.container}>
             
             <div className={styles.mainContact} >
