@@ -1,10 +1,20 @@
 import styles from './Planos.module.css'
 import CompImg from './CompImg'
+import Plano from './Plano'
+
 export default function Planos(props) {
     return (
         <div className={styles.pagina}>
 
-                   {props.children}
+                    <div className={styles.banner}>
+                            
+                        <div className={styles.quadrado}></div>
+                        <h1>Tabela de planos:</h1>
+  
+                        <CompImg src="assets/Images/bannerplanos.png" alt="banner" id={styles.bannermaior} />
+                    </div>
+
+                    {props.children}
 
                     <div className={styles.textopropaganda}>
                         <p>
@@ -15,75 +25,15 @@ export default function Planos(props) {
                     </div>
 
                     <div className={styles.planosgrupo}>
-                        <div className={styles.planos}>
-                            <h1>Plano Start</h1>
-                            <h2>
-                                Treine o quanto quiser na sua unidade,<br/>
-                                sem taxa de cancelamento.
-                            </h2>
-                            <h2>Mensalidades a partir de R$ 69,90</h2>
+                        
+                        {
+                            props.listaPlanos.map(
+                                item => (
+                                    <Plano key={item.id} nome={item.nomeplano} descricao={item.descricaoplano} valor={item.valor} />
+                                )
+                            )
+                        }
 
-                            <h3 id={styles.middle}>ATIVIDADES</h3>
-                            <ul>
-                                <li><img src="assets/Icon/seta2.svg" id={styles.iconseta} />Área de musculação e aeróbicos</li>
-                                <li><img src="assets/Icon/seta2.svg" id={styles.iconseta} />Aulas especiais</li>
-                            </ul>
-                            <h3>BENEFÍCIOS INCLUSOS</h3>
-                            <ul>
-                                <li><img src="assets/Icon/seta2.svg" id={styles.iconseta} />Área de musculação e aeróbicos</li>
-                                <li><img src="assets/Icon/seta2.svg" id={styles.iconseta} />Aulas de Ginastica</li>
-                                <li><img src="assets/Icon/seta2.svg" id={styles.iconseta} />Sem taxa de cancelamento</li>
-                            </ul>
-                            <a href="/contact" class={styles.buttonassinar}>Assinar agora</a>
-                        </div>
-
-                        <div className={styles.planos}>
-                            <h1>Plano Master</h1>
-                            <h2>
-                                Treine em qualquer unidade Smart Fit a América Latina.
-                            </h2>
-                            <h2>Mensalidades a partir de R$ 99,90</h2>
-
-                            <h3 id={styles.middle}>ATIVIDADES</h3>
-                            <ul>
-                                <li><img src="assets/Icon/seta2.svg" id={styles.iconseta} />Área de musculação e aeróbicos</li>
-                                <li><img src="assets/Icon/seta2.svg" id={styles.iconseta} />Aulas especiais</li>
-                            </ul>
-                            <h3>BENEFÍCIOS INCLUSOS</h3>
-                            <ul>
-                                <li><img src="assets/Icon/seta2.svg" id={styles.iconseta} />Área de musculação e aeróbicos</li>
-                                <li><img src="assets/Icon/seta2.svg" id={styles.iconseta} />Aulas de Ginastica</li>
-                                <li><img src="assets/Icon/seta2.svg" id={styles.iconseta} />Cadeira de massagem</li>
-                                <li><img src="assets/Icon/seta2.svg" id={styles.iconseta} />Acesso ilimitado às demais unidades da rede**</li>
-                                <li><img src="assets/Icon/seta2.svg" id={styles.iconseta} />Camiseta Black</li>
-                                <li><img src="assets/Icon/seta2.svg" id={styles.iconseta} />Treinar com um amigo</li> 
-                            </ul>
-                            <a href="/contact" class={styles.buttonassinar}>Assinar agora</a>
-                        </div>
-                            
-                        <div className={styles.planos}>
-                            <h1>Plano CrossFit</h1>
-                            <h2>
-                                Treine em qualquer unidade Smart Fit a América Latina.
-                            </h2>
-                            <h2>Mensalidades a partir de R$ 69,90</h2>
-
-                            <h3 id={styles.middle}>ATIVIDADES</h3>
-                            <ul>
-                                <li><img src="assets/Icon/seta2.svg" id={styles.iconseta} />Área de musculação e aeróbicos</li>
-                                <li><img src="assets/Icon/seta2.svg" id={styles.iconseta} />Aulas especiais</li>
-                            </ul>
-                            <h3>BENEFÍCIOS INCLUSOS</h3>
-                            <ul>
-                                <li><img src="assets/Icon/seta2.svg" id={styles.iconseta} />Área de musculação e aeróbicos</li>
-                                <li><img src="assets/Icon/seta2.svg" id={styles.iconseta} />Aulas de Ginastica</li>
-                                <li><img src="assets/Icon/seta2.svg" id={styles.iconseta} />Cadeira de massagem</li>
-                                <li><img src="assets/Icon/seta2.svg" id={styles.iconseta} />Acesso ilimitado às demais unidades da rede**</li>
-                                <li><img src="assets/Icon/seta2.svg" id={styles.iconseta} />Camiseta Black</li>
-                                <li><img src="assets/Icon/seta2.svg" id={styles.iconseta} />Treinar com um amigo</li> 
-                            </ul>
-                            <a href="/contact" class={styles.buttonassinar}>Assinar agora</a>
-                        </div>
                     </div>
 
                     <div className={styles.textoinferior}>
@@ -97,7 +47,7 @@ export default function Planos(props) {
                                 um professor exclusivo e dedicado a fazer você alcançar<br/>
                                 o fisico que sempre sonhou.
                             </p>
-                            <a href="/contact" class={styles.buttonassinar}>Assinar agora</a>
+                            <a href="/contact" className={styles.buttonassinar}>Assinar agora</a>
                         </div>
 
                         <div className={styles.imagemdireita}>
