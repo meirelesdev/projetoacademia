@@ -18,7 +18,7 @@ export async function getStaticProps() {
 function PagePlanos(props) {
     return (
         <>
-            <Header/>            
+            <Header/>
                 <Planos listaPlanos={props.listaPlanos}/>
             <Footer/>
         </>
