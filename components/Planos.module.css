@@ -71,9 +71,9 @@
     border: 1px solid #ff7433;
     color: white;
     font-family: 'calibripnegrito';
-    width: 500px;
+    width: 30%;
     position: relative;
-    height: 670px;
+    height: 660px;
 }
 
 .planos h1 {
@@ -110,6 +110,7 @@
     font-size: 16px;
     margin-left: 66px;
     padding: 1px 0px;
+    margin-right: 40px;
 }
 
 .planos .buttonassinar{
@@ -152,14 +153,13 @@
 }
 
 @media (max-width: 1580px) {
-    .planosgrupo {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
     .planos {
         margin-top: 50px;
+        height: 720px;
+    }
+
+    .planos h2 {
+        padding: 0px 25px;
     }
 
     .textopropaganda {
@@ -174,6 +174,22 @@
 }
 
 @media (max-width: 1320px) {
+    .planos {
+        height: 700px;
+    }
+
+    .planos h3 {
+        margin-left: 70px;
+    }
+
+    .planos h2 {
+        padding: 0px 25px;
+    }
+
+    .planos ul li {
+        margin-left: 30px;
+    }
+
     .textoinferior {
         flex-direction: column;
         padding-left: 0px;
@@ -186,6 +202,18 @@
 
     .imagemdireita {
         text-align: center;
+    }
+}
+
+@media (max-width: 1220px) {
+    .planosgrupo {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .planos {
+        width: 450px;
     }
 }
 
