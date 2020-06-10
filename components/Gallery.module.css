@@ -20,6 +20,7 @@
     position: relative;
     width: 100%;
     max-width: 400px;
+    min-width: 300px;
     margin-bottom: 20px;
     cursor: zoom-in;
 }
@@ -76,7 +77,6 @@
     /* opacity: 1;
     visibility: visible; */
     display: flex;
-
     width: 100vw;
     height: 100vh;
     top:0;
@@ -93,22 +93,19 @@
     margin: 50px auto;
     color: white;
 }
-.boxImg a{
-    
-}
+
 .boxImg img{
-    width: 65%;
-    height: 65%;
-    margin:  5% auto;
+    width: 100%;
+    margin:  150px auto;
 }
 .btnPrev{
     text-decoration: none;
-    font-size: 10rem;
+    font-size: 10em;
     font-weight: bold;
     position: absolute;
-    width: 5px;
+    /* width: 5px; */
     top: 20%;
-    left: 5%;
+    left: -50%;
     color: white;
 }
 
@@ -117,9 +114,9 @@
     font-size: 10em;
     font-weight: bold;
     position: absolute;
-    width: 5px;
+    /* width: 5px; */
     top: 20%;
-    right: 5%;
+    right: -50%;
     color: white;
 }
 .btnClose{

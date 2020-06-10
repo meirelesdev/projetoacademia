@@ -28,7 +28,7 @@ export default function Contact() {
             
             <div className={styles.mainContact} >
                 <div className={styles.imgContact} ></div>
-                <div>
+                <div className={styles.mainForm}>
                     <div className={styles.titleContact} >
                         <h1>Para maiores informações entre em contato com nossa equipe de atendimento. Teremos prazer em atender você.</h1>
                     </div>
