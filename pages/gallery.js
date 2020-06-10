@@ -11,10 +11,6 @@ import styles from '../components/Gallery.module.css'
 // import axios from 'axios'
 
 export default function Gallery({ photos }) {
-    const handleZoom = (event)=>{
-        const photo = event.target
-        photo.getAttribute('key')
-    }
 
     return(
         <>
