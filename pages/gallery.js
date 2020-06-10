@@ -7,7 +7,6 @@ import Banner from '../components/Banner'
 import CompImg from '../components/CompImg'
 import styles from '../components/Gallery.module.css'
 
-// import axios from 'axios'
 
 export default function Gallery(props) {
     
@@ -51,7 +50,9 @@ export default function Gallery(props) {
         </>
     )
 }
+
 Gallery.getInitialProps = async (ctx)=>{
+    
     let photos = []
     
     photos = await axios.get(`${serverUrl}/gallery`)
