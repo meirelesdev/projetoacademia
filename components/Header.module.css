@@ -92,3 +92,13 @@
         padding-right: 3.5em;
     }
 }
+
+@media (max-width: 480px) {
+    .logo {
+        width: 80px;
+        z-index: 80;
+        margin-left: 8%;
+        margin-top: 10px;
+        position: absolute;
+    }
+}
