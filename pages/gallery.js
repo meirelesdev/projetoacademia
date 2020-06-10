@@ -9,9 +9,13 @@ import styles from '../components/Gallery.module.css'
 
 // import axios from 'axios'
 
+<<<<<<< HEAD
+export default function Gallery({ photos }) {
+=======
 export default function Gallery(props) {
     
     const photos = props.photos
+>>>>>>> 24c1938eb85bf7fca10d9df21697dc85dd91dd52
 
     return(
         <>
