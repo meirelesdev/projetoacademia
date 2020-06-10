@@ -9,13 +9,9 @@ import styles from '../components/Gallery.module.css'
 
 // import axios from 'axios'
 
-<<<<<<< HEAD
-export default function Gallery({ photos }) {
-=======
 export default function Gallery(props) {
     
     const photos = props.photos
->>>>>>> 24c1938eb85bf7fca10d9df21697dc85dd91dd52
 
     return(
         <>
@@ -23,7 +19,7 @@ export default function Gallery(props) {
                     <Banner fotoBanner="assets/Images/banner-gallery.jpg" titleBanner="Galeria de Fotos"/>
                         <h2 className={styles.callToAction}>Confira o que a Fitness Training tem a lhe oferecer, Conheça um pouco da nossa estrutura, e equipamentos para fazer você elevar seu nível de treino.</h2>
                     <div className={styles.container} id="init">
-                        {console.log(photos)}
+                        
                         {photos? 
                             photos.map((photo, index) => (                            
                                 <div className={styles.photo}  key={photo.id} >
