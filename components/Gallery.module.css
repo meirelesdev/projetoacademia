@@ -1,10 +1,10 @@
 .callToAction{
     max-width: 1200px;
     font-weight: normal;
-    line-height: 50px;
+    line-height: 40px;
     padding: 2%;
     /* font-size: 20px; */
-    margin: 100px auto;
+    margin: 80px auto;
     text-align: center;
     
 }
@@ -40,9 +40,9 @@
     margin: 0 auto;
     background-image: url("/assets/Icon/lupa.svg");
     background-repeat: no-repeat;
-    background-size: 50%;
+    background-size: 20%;
     background-position: center;
-    background-color: rgba(241, 80, 0,0.7);
+    background-color: rgba(241, 80, 0,0.6);
     transition-duration: 0.3s;
 }
 .photo:hover > .overlay{
@@ -79,51 +79,54 @@
     display: flex;
     width: 100vw;
     height: 100vh;
+    padding: 20%;
     top:0;
     left: 0;
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0,0,0,0.7);
     /* background-color: rgba(241, 80, 0,0.8); */
     position: fixed;
-    text-align: center;
+    justify-content: center;
+    align-items: center;
     z-index: 999;
 }
 .boxImg{
     position: relative;
+    width: 80%;
     /* height: 80%; */
-    margin: 50px auto;
+    margin: 10%  auto;
     color: white;
 }
 
 .boxImg img{
     width: 100%;
-    margin:  150px auto;
+    /* margin: 15% auto; */
 }
 .btnPrev{
     text-decoration: none;
-    font-size: 10em;
+    font-size: 8em;
     font-weight: bold;
     position: absolute;
     /* width: 5px; */
     top: 20%;
-    left: -50%;
+    left: -20%;
     color: white;
 }
 
 .btnNext{
     text-decoration: none;
-    font-size: 10em;
+    font-size: 8em;
     font-weight: bold;
     position: absolute;
     /* width: 5px; */
     top: 20%;
-    right: -50%;
+    right: -20%;
     color: white;
 }
 .btnClose{
     position: absolute;
-    top: 1%;
-    right: 17%;
-    font-size: 30px;
+    top: -6%;
+    right: 0;
+    font-size: 1.2em;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     padding:0 4px;

@@ -1,0 +1,409 @@
+.bannergrande {
+    background-color: black;
+    position: relative;
+    margin-top: -200px;
+}
+
+.bannergrande #corredor {
+    opacity: 0.6;
+    width: 100%;
+    height: 100%;
+}
+
+.textobanner {
+    position: absolute;
+    font-weight: bold;
+    color: whitesmoke;
+    text-align: end;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    right: 7%;
+    bottom: 25%;
+    width: 750px;
+    z-index: 10;
+    margin: 0;
+}
+
+.textobanner #primeiro {
+    font-size: 5em;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-bottom: 15px;
+}
+
+.textobanner #terceiro {
+    font-size: 4.5em;
+    color: black;
+    background-color: #f15000;
+    margin-left: 175px;
+}
+
+.textobanner #quarto {
+    font-size: 4.5em;
+    color: black;
+    margin-block-start: 10px;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    background-color: #f15000;
+    margin-left: 435px;
+}
+
+.textobanner #terceiro p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-right: 25px;
+}
+
+.textobanner #quarto p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-right: 25px;
+}
+
+.blog {
+    position: relative;
+    width: 100%;
+    color: white;
+    font-family: 'calibri';
+    background-color: black;
+}
+
+.quadrado {
+    width: 40px;
+    height: 50px;
+    background-color: #f7c926;
+    position: absolute;
+    top: -8px;
+    left: 25px;
+    z-index: 2;
+}
+
+.titulo {
+    position: absolute;
+    font-weight: bold;
+    color: #f7c926;
+    margin-block-start: 0;
+    z-index: 2;
+    top: 15px;
+    left: 80px;
+}
+
+#fundoblog {
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+}
+
+.texto {
+    position: relative;
+    width: 100%;
+    color: white;
+    font-family: 'calibri';
+    background-color: black;
+    text-align: end;
+}
+
+.conteudo {
+    position: absolute;
+    z-index: 3;
+    right: 7%;
+    bottom: 15%;
+}
+
+.conteudo h1 {
+    font-weight: bold;
+    font-size: 3.5em;
+}
+
+.conteudo p {
+    color: #f15000;
+    font-size: 25px;
+}
+
+.nossosplanos {
+    position: relative;
+    width: 100%;
+    color: white;
+    font-family: 'calibri';
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+}
+
+.nossosplanos #imagens {
+    display: flex;
+}
+
+.nossosplanos p {
+    font-size: 25px;
+    position: absolute;
+    left: 5%;
+    top: 45px;
+    z-index: 3;
+}
+
+#imagens #mapa {
+    width: 68%;
+    height: 100%;
+}
+
+#imagens #mulher {
+    width: 32%;
+    height: 100%;
+    opacity: 0.6;
+}
+
+.leiamaisbotao {
+    position: absolute;
+    left: 3%;
+    bottom: 8%;
+	background-color:#f15000;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:14px 31px;
+	text-decoration:none;
+}
+
+.blogs {
+    position: relative;
+    font-family: 'calibri';
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.itemblog {
+    position: relative;
+}
+
+.blogs h1 {
+    position: absolute;
+    z-index: 3;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    top: 2%;
+    left: 5%;
+}
+
+#paragrafo {
+    position: absolute;
+    z-index: 3;
+    top: 15%;
+    left: 5%;
+    font-size: 23px;
+    color: #f15000; 
+}
+
+#paragrafo p {
+    background-color: black;
+    width: fit-content;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.blogs a {
+    position: absolute;
+    z-index: 3;
+}
+
+#fundoblogmateria {
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+}
+
+.leiamaisbotao:hover {
+	background-color:#ff6e2b;
+}
+
+.leiamaisbotaoblog {
+    position: absolute;
+    left: 6%;
+    bottom: 15%;
+	background-color:#f15000;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:14px 31px;
+	text-decoration:none;
+}
+
+.leiamaisbotaoblog:hover {
+	background-color:#ff6e2b;
+}
+
+@media (max-width: 1200px) {
+    .textobanner #primeiro {
+        font-size: 4em;
+    }
+    
+    .textobanner #terceiro {
+        font-size: 3.5em;
+        margin-left: 285px;
+    }
+    
+    .textobanner #quarto {
+        font-size: 3.5em;
+        margin-left: 500px;
+    }
+    
+    .conteudo h1 {
+        font-weight: bold;
+        font-size: 2.5em;
+    }
+    
+    .conteudo p {
+        color: #f15000;
+        font-size: 16px;
+    }
+
+    .nossosplanos p {
+        font-size: 20px;
+        left: 5%;
+        top: 45px;
+    }
+}
+
+@media (max-width: 900px) {
+    .textobanner #primeiro {
+        font-size: 3em;
+    }
+    
+    .textobanner #terceiro {
+        font-size: 2.5em;
+        margin-left: 405px;
+    }
+    
+    .textobanner #quarto {
+        font-size: 2.5em;
+        margin-left: 550px;
+    }
+
+    .conteudo h1 {
+        font-weight: bold;
+        font-size: 1.5em;
+    }
+    
+    .conteudo p {
+        color: #f15000;
+        font-size: 10px;
+    }
+
+    .quadrado {
+        width: 35px;
+        height: 40px;
+        top: -8px;
+        left: 25px;
+    }
+
+    .titulo {
+        font-size: 20px;
+    }
+
+    .nossosplanos p {
+        font-size: 15px;
+        left: 5%;
+        top: 45px;
+    }
+}
+
+@media (max-width: 720px) {
+    .textobanner #primeiro {
+        font-size: 1.5em;
+    }
+    
+    .textobanner #terceiro {
+        font-size: 0.7em;
+        margin-left: 645px;
+    }
+
+    .textobanner #terceiro p {
+        margin-right: 10px;
+    }
+    
+    .textobanner #quarto {
+        font-size: 0.7em;
+        margin-left: 690px;
+    }
+
+    .textobanner #quarto p {
+        margin-right: 10px;
+    }
+
+    .conteudo h1 {
+        font-weight: bold;
+        font-size: 0.5em;
+    }
+    
+    .conteudo p {
+        color: #f15000;
+        font-size: 8px;
+    }
+
+    .quadrado {
+        width: 18px;
+        height: 23px;
+        top: 2px;
+        left: 25px;
+    }
+
+    .titulo {
+        font-size: 10px;
+        left: 52px;
+    }
+
+    .nossosplanos p {
+        font-size: 10px;
+        left: 5%;
+        top: 45px;
+    }
+
+    .nossosplanos .leiamaisbotao {
+        padding:10px 15px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 1400px) {
+    .bannergrande {
+        margin-top: -125px;
+    }
+
+    .blogs h1 {
+        font-size: 17px;
+    }
+
+    .blogs #paragrafo {
+        font-size: 15px;
+    }
+
+    .blogs .leiamaisbotaoblog {
+        padding:10px 15px;
+        font-size: 12px;
+        left: 10px;
+    }
+}
+
+@media (max-width: 1020px) {
+    .blogs {
+        flex-direction: column;
+    }
+
+    .itemblog {
+        padding-top: 15px;
+    }
+}
+
+@media (max-width: 340px) {
+    .blogs #paragrafo {
+        font-size: 10px;
+    }
+}

@@ -7,7 +7,6 @@ import Banner from '../components/Banner'
 import CompImg from '../components/CompImg'
 import styles from '../components/Gallery.module.css'
 
-// import axios from 'axios'
 
 export default function Gallery(props) {
     
@@ -19,7 +18,7 @@ export default function Gallery(props) {
                     <Banner fotoBanner="assets/Images/banner-gallery.jpg" titleBanner="Galeria de Fotos"/>
                         <h2 className={styles.callToAction}>Confira o que a Fitness Training tem a lhe oferecer, Conheça um pouco da nossa estrutura, e equipamentos para fazer você elevar seu nível de treino.</h2>
                     <div className={styles.container} id="init">
-                        {console.log(photos)}
+                        
                         {photos? 
                             photos.map((photo, index) => (                            
                                 <div className={styles.photo}  key={photo.id} >
@@ -51,7 +50,9 @@ export default function Gallery(props) {
         </>
     )
 }
+
 Gallery.getInitialProps = async (ctx)=>{
+    
     let photos = []
     
     photos = await axios.get(`${serverUrl}/gallery`)
