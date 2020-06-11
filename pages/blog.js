@@ -6,7 +6,7 @@ import CompImg from '../components/CompImg'
 import Axios from 'axios'
 import serverUrl from '../utils/env'
 
-export default function  Blog(props) {
+export default function  Blog({posts}) {
     
     const posts = props.posts
 
