@@ -1,0 +1,44 @@
+import Header from '../components/Header'
+import Footer from '../components/Footer'
+import Input from '../components/Input'
+import Button from '../components/Button'
+import styles from '../components/Contact.module.css'
+import { useState } from 'react'
+import axios from 'axios'
+import serverUrl from '../utils/env'
+
+export default function Register(props){
+    const [values, setValues ] = useState({name:'', email:'',password:'', birth_at:'', level:'1', photo:'user.png'})
+
+    const handleInputChange = e => {
+        const { name, value }= e.target
+        setValues({...values, [name]:value})
+        console.log(value)
+    }
+
+    const handleRegister = e => {
+        e.preventDefault()
+        
+        axios.post(`${serverUrl}/users`, values)
+        .then( res => {
+        alert(`Olá ${res.data.name} seus dados foram cadastrados ID: ${res.data.id}`)
+        window.location.href=("/")
+            
+        }).catch( err => alert("Deu ruim", err))
+    }
+
+    return(
+        <>
+        <Header />
+            <form className={styles.form} onSubmit={handleRegister}>
+                <div className={styles.fields}>
+                    <Input type="text" name="name" onChange={handleInputChange} onFocus={handleInputChange} label="Nome Completo"/>
+                    <Input type="email" name="email" label="Email" onChange={handleInputChange}onFocus={handleInputChange} />
+                    <Input type="password" name="password" label="Senha" onChange={handleInputChange} onFocus={handleInputChange}/>
+                </div>            
+                <Button text="Cadastrar-se"/>
+            </form>
+        <Footer />
+        </>
+    )
+}
