@@ -37,7 +37,8 @@
 }
 
 .navbar a {
-    font-family: 'calibrip';
+    font-family: 'calibri';
+    font-weight: bold;
     text-decoration: none;
     color: white;
 }
@@ -90,5 +91,15 @@
     .navbar li{
         padding-left: 2.5em;
         padding-right: 3.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        width: 80px;
+        z-index: 80;
+        margin-left: 8%;
+        margin-top: 10px;
+        position: absolute;
     }
 }
