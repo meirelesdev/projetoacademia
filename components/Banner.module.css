@@ -11,7 +11,8 @@
 
 .banner h1{
     color: #f7c926;
-    font-family: 'calibripnegrito';
+    font-family: 'calibri';
+    font-weight: bold;
     margin-left: 25px;
     position: absolute;
     bottom: 25px;

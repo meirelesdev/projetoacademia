@@ -38,7 +38,8 @@
 }
 
 .navbar a {
-    font-family: 'calibrip';
+    font-family: 'calibri';
+    font-weight: bold;
     text-decoration: none;
     color: white;
 }

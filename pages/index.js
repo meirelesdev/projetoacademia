@@ -17,9 +17,6 @@ export default function Index() {
                         O sucesso só<br/>
                         depende de você!
                     </p>
-                    <p id={styles["segundo"]}>
-                        Sinta-se sempre saudável!
-                    </p>
                     <div id={styles["terceiro"]}><p>Planos a partir de</p></div>
                     <div id={styles["quarto"]}><p>R$ 69,99</p></div>
                 </div>
