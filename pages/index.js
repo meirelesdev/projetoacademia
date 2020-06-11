@@ -5,6 +5,7 @@ import Footer from '../components/Footer'
 import styles from '../components/Index.module.css'
 
 
+
 export default function Index() {
     return(
         <>

@@ -6,7 +6,7 @@ export default () => {
         <header>
             <Link  href="/">
                 <a>
-                    <img className={styles["logo"]} src="assets/Logo/Fitness.svg" id="logo" alt="Logo" />
+                    <img className={styles["logo"]} srcSet="assets/Logo/Fitness.svg" id="logo" alt="Logo" />
                 </a>
             </Link>
             
@@ -14,7 +14,7 @@ export default () => {
                 
                 <Link href="/studentArea" >
                     <a className={styles["btnlogin"]}>
-                        <img src="assets/Icon/user.svg" id={styles["icon"]} />
+                        <img srcSet="assets/Icon/user.svg" id={styles.icon} />
                     </a>
                 </Link>
 
