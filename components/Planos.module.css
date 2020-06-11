@@ -1,5 +1,5 @@
 .pagina {
-    font-family: 'calibrip';
+    font-family: 'calibri';
     display: flex;
     flex-direction: column;
 }
@@ -35,7 +35,7 @@
 
 .banner h1{
     color: #f7c926;
-    font-family: 'calibripnegrito';
+    font-weight: bold;
     margin-left: 25px;
     position: absolute;
     bottom: 25px;
@@ -70,7 +70,7 @@
     background-color: black;
     border: 1px solid #ff7433;
     color: white;
-    font-family: 'calibripnegrito';
+    font-weight: bold;
     width: 30%;
     position: relative;
     height: 660px;
@@ -78,7 +78,7 @@
 
 .planos h1 {
     color: #f15000;
-    font-family: 'calibripnegrito';
+    font-weight: bold;
     font-size: 55px;
     text-align: center;
     margin-block-start: 0.90em;
@@ -86,7 +86,7 @@
 }
 
 .planos h2 {
-    font-family: 'calibripnegrito';
+    font-weight: bold;
     font-size: 17px;
     text-align: center;
     margin-block-start: 0;
@@ -131,7 +131,7 @@
 
 .textoinferior h1 {
     color: #f15000;
-    font-family: 'calibripnegrito';
+    font-weight: bold;
     font-size: 65px;
     text-align: center;
     padding: 40px 0px;
