@@ -9,7 +9,7 @@ export default function Planos(props) {
                     <div className={styles.banner}>
                             
                         <div className={styles.quadrado}></div>
-                        <h1>Tabela de planos:</h1>
+                        <h1>Tabela de planos</h1>
   
                         <CompImg src="assets/Images/bannerplanos.png" alt="banner" id={styles.bannermaior} />
                     </div>
