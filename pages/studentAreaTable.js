@@ -6,8 +6,7 @@ import { useCookies } from 'react-cookie'
 
 export default function Studentareatable() {
     const [cookies, setCookie] = useCookies();
-    const name = cookies.user['name']
-    console.log(name)
+    const name = cookies.user
     return (
         <>
             <Header />
