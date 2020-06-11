@@ -1,13 +1,12 @@
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-import Link from 'next/link'
+import Banner from '../components/Banner'
 
-export default () => {
+export default (props) => {
     return (
         <>
             <Header/>
-                <section>
-                </section>
+                <Banner fotoBanner="assets/Images/bannersobrenos.jpg" titleBanner="Sobre nós" />
             <Footer/>
         </>
     )

@@ -9,6 +9,7 @@
 
 .field label {
     color: #ff5100;
+    font-weight: bold;
     font-size: 14px;
     position: absolute;
     z-index: 2;
@@ -21,12 +22,13 @@
     line-height: 1.5em;
     padding: 10px;
     padding-top: 30px;
+    height: 170px;
     font-size: 14px;
     color: #fff;
-    background-color: #504d4d96;
+    background-color: #282828;
     outline: none;
-    font-family: 'Open Sans';
-    border: #ff5100 2px solid;
+    font-family: 'calibri';
+    border: #ff5100 4px solid;
     border-radius: 5px;
     position: relative;
     z-index: 1;
@@ -35,12 +37,27 @@
 }
 
 .field textarea:focus {
-    border-color: #00994D;
+    border-color: #a2a2a2;
 }
 
 .field textarea:focus + label {
-    color: #00994D;
+    color: #a2a2a2;
 }
+
+
+@media (min-width: 768px) {
+    
+    .field label {
+        font-size: 18px;
+    }
+    
+    .field textarea {
+        line-height: 1.7em;
+        font-size: 24px;
+    }
+
+}
+
 
 
 

@@ -3,10 +3,10 @@ import Link from 'next/link'
 
 export default () => {
     return (
-        <>
+        <header>
             <Link  href="/">
                 <a>
-                    <img className={styles["logo"]} src="assets/Logo/Fitness.svg" id="logo" alt="Logo" />
+                    <img className={styles["logo"]} srcSet="assets/Logo/Fitness.svg" id="logo" alt="Logo" />
                 </a>
             </Link>
             
@@ -14,7 +14,7 @@ export default () => {
                 
                 <Link href="/studentArea" >
                     <a className={styles["btnlogin"]}>
-                        <img src="assets/Icon/user.svg" id={styles["icon"]} />
+                        <img srcSet="assets/Icon/user.svg" id={styles.icon} />
                     </a>
                 </Link>
 
@@ -26,8 +26,7 @@ export default () => {
                     <li><Link href="/blog" ><a>Blog</a></Link></li>
                     <li><Link href="/contact" ><a>Contato</a></Link></li>
                 </ul>
-
-            </div><a></a>
-        </>
+            </div>
+        </header>
     )
 }

@@ -1,28 +1,28 @@
 @font-face {
-    font-family: 'calibrip';
+    font-family: 'calibri';
     font-style: normal;
     font-weight: 300;
     src: url('/assets/fonts/calibri.ttf') format('truetype');
 }
 
 @font-face {
-    font-family: 'calibripnegrito';
+    font-family: 'calibri';
     font-style: normal;
-    font-weight: 300;
+    font-weight: bold;
     src: url('/assets/fonts/calibribold.ttf') format('truetype');
 }
+
 
 * {
     box-sizing: border-box;
 }
 
 body {
+    font-family: 'calibri';
+    font-style: normal;
+    font-weight: 300;
     margin: 0;
     padding: 0;
     background-color: white;
     scroll-behavior: smooth;
-}
-/* Editar depois so para ficar visualmente melhor a home*/
-section {
-    height: 100vh;
 }
