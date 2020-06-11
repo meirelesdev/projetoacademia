@@ -1,9 +1,11 @@
 import styles from './Headerindex.module.css'
 import Link from 'next/link' 
 
-export default () => {
+export default function Headerindex(){
     return (
         <>
+        <div className={styles["container"]}>
+            <h2>Gustavo</h2>
             <Link  href="/">
                 <a>
                     <img className={styles["logo"]} src="assets/Logo/Fitness.svg" id="logo" alt="Logo" />
@@ -28,6 +30,7 @@ export default () => {
                 </ul>
 
             </div><a></a>
+            </div>
         </>
     )
 }

@@ -2,10 +2,6 @@
 @import "../styles/reset.css";
 
 @font-face {
-    font-family: Barrio;
-    src: url(../fonts/Barrio-Regular.ttf)
-}
-@font-face {
     font-family: 'calibri';
     /* font-style: normal; */
     /* font-weight: 300; */

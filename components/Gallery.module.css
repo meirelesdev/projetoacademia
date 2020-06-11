@@ -77,8 +77,8 @@
     /* opacity: 1;
     visibility: visible; */
     display: flex;
-    width: 100vw;
-    height: 100vh;
+    /* width: 100vw; */
+    /* height: 100vh; */
     padding: 20%;
     top:0;
     left: 0;
@@ -91,14 +91,14 @@
 }
 .boxImg{
     position: relative;
-    width: 80%;
+    width: 100%;
     /* height: 80%; */
-    margin: 10%  auto;
+    /* margin: 10%  auto; */
     color: white;
 }
 
 .boxImg img{
-    width: 100%;
+    width: 80%;
     /* margin: 15% auto; */
 }
 .btnPrev{
