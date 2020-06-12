@@ -1,7 +1,16 @@
 import styles from './Header.module.css'
 import Link from 'next/link' 
+import { useState } from 'react'
+import Sidebar from '../components/Sidebar'
 
 export default () => {
+
+    const [sidebarShow, setSidebar] = useState(false)
+
+    function toogleSidebar(e) {
+        setSidebar(!sidebarShow)
+    }
+
     return (
         <header>
             <Link  href="/">
@@ -27,6 +36,11 @@ export default () => {
                     <li><Link href="/contact" ><a>Contato</a></Link></li>
                 </ul>
             </div>
+
+            <button onClick={toogleSidebar} className={styles["menu"]}><img srcSet="assets/Icon/abrir.svg" id={styles.icon} /></button>
+
+            <Sidebar show={sidebarShow} toogleSidebar={toogleSidebar}/>
+
         </header>
     )
 }
