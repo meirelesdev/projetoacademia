@@ -9,10 +9,11 @@
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
-	font-family:Arial;
+	font-family: 'Calibri'!important;
 	font-size:20px;
 	padding:18px 40px;
-	text-decoration:none;
+    text-decoration:none;
+    margin: 5%;
 }
 .buttonassinar:hover {
 	background-color:#ff7433;
@@ -38,7 +39,7 @@
     font-weight: bold;
     margin-left: 25px;
     position: absolute;
-    bottom: 25px;
+    bottom: 28px;
     left: 100px;
     z-index: 3;
     font-size: 1.5em;
@@ -49,7 +50,7 @@
     height: 50px;
     background-color: #f7c926;
     position: absolute;
-    bottom: 50px;
+    bottom: 32px;
     left: 75px;
     z-index: 3;
 }
@@ -166,8 +167,6 @@
         padding-top: 75px;
         padding-bottom: 25px;
         font-size: 1.5em;
-        padding-left: 25px;
-        padding-right: 25px;
     }
 
 

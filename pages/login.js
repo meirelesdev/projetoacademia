@@ -12,35 +12,52 @@ import styles from '../components/Contact.module.css'
 
 export default function Login(){
 
-    const [values, setValues ] = useState({email: '', password:''})
-    const cookies = new Cookies()
 
-    let [token, setToken ]= useState(cookies.get('token') || null)
+    const cookies = new Cookies();
+    const cookiesUser = new Cookies();
 
+    let [token, setToken] = useState(cookies.get('token') || null)
+
+    const [values, setValues] = useState({ email: '', password: '' })
     const handleInputChange = e => {
-        const { name, value }= e.target
-        
-        setValues({...values, [name]:value})
+        const { name, value } = e.target
+        setValues({ ...values, [name]: value })
+
     }
 
     const handleLogin = e => {
         e.preventDefault()
-        
-        axios.post(`${serverUrl}/auths` , values)
-        .then(
-            (res)=>{
-                const tokenData = res.data.token
-                cookies.set('token', tokenData)
-                console.log('Usúario Autenticado!')
-                window.location.href=("/admin")
+        //console.log(values)
+        axios.post('http://localhost:3333/auths', values)
+            .then(
+                (res) => {
+                    // console.log(res)
+                    const tokenData = res.data.token
+                    const user = res.data.user["name"]
+                    console.log(user)
+                    const isAdmin = res.data.user.isAdmin
+                    //console.log('isadmin ',isAdmin)
+                    cookies.set('token', tokenData)
+                    cookiesUser.set('user', user)
+                    alert("Seja bem vindo! " + values.email)
+                    switch (isAdmin) {
+                        case 1:
+                            window.location.href = ("/studentAreaTable")
+                            break;
+                        case 0:
+                            window.location.href = ("/")
+                            break;
+                        default:
+                            alert('erro fatal')
+                            break;
+                    }
 
-            }
-        ).catch(err => {
-            alert('Deu ruim', err.message)
-        })
+
+                }
+            ).catch(err => alert("Usuário não encontrado, tente novamente e se o problema persistir contate um administrador ", err))
     }
 
-    return(
+    return (
         <>
             <Header />
             

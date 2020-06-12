@@ -1,9 +1,15 @@
 import styles from './Header.module.css'
 import Link from 'next/link' 
+import { useState } from 'react'
+import Sidebar from '../components/Sidebar'
 
+export default function Header () {
 
-export default () => {
-    
+    const [sidebarShow, setSidebar] = useState(false)
+
+    function toogleSidebar(e) {
+        setSidebar(!sidebarShow)
+    }
 
     return (
         <header>
@@ -15,25 +21,12 @@ export default () => {
             
             <div className={styles["headerfundo"]}>
                 
-                <Link href="/studentArea" >
+                <Link href="/login" >
                     <a className={styles["btnlogin"]}>
                         <img srcSet="assets/Icon/user.svg" id={styles.icon} />
                     </a>
                 </Link>
-                <div className={styles.btnlogin}>
-                    <form >
-                        <Link href="/login">
-                            <a>
-                            <button >Login</button>
-                            </a>
-                        </Link>
-                        <Link href="/register">
-                                <a>
-                                <button >Registre-se</button>
-                                </a>
-                        </Link>
-                    </form>
-                </div>
+                
 
                 <ul className={styles["navbar"]} >
                     <li><Link href="/" ><a>Home</a></Link></li>
@@ -44,6 +37,11 @@ export default () => {
                     <li><Link href="/contact" ><a>Contato</a></Link></li>
                 </ul>
             </div>
+
+            <button onClick={toogleSidebar} className={styles["menu"]}><img srcSet="assets/Icon/abrir.svg" id={styles.icon} /></button>
+
+            <Sidebar show={sidebarShow} toogleSidebar={toogleSidebar}/>
+
         </header>
     )
 }

@@ -1,5 +1,6 @@
 import Footer from '../components/Footer'
 import Header from '../components/Header'
+import Input from '../components/Input'
 import styles from '../components/Studentarea.module.css'
 import Head from 'next/head'
 import Button from '../components/Button'
@@ -18,7 +19,7 @@ export default function Studentarea() {
     const handleInputChange = e => {
         const {name, value} = e.target
         setValues({...values, [name]: value})
-        console.log(name)
+        
     }
 
     const handleFormSubmit = e => {
@@ -29,9 +30,10 @@ export default function Studentarea() {
                 (res) => {
                    // console.log(res)
                     const tokenData = res.data.token
-                    const user = res.data.user
+                    const user = res.data.user["name"]
+                    console.log(user)
                     const isAdmin = res.data.user.isAdmin
-                    console.log('isadmin ',isAdmin)
+                    //console.log('isadmin ',isAdmin)
                     cookies.set('token', tokenData)
                     cookiesUser.set('user', user)
                     alert("Seja bem vindo! " + values.email)
@@ -62,13 +64,13 @@ export default function Studentarea() {
                             <div>
                                 <div>
                                     <label htmlFor="email">E-mail</label>
-                                    <input type="email" name="email" id="email" className={styles.mid_input} onChange={handleInputChange}
+                                    <Input type="email" name="email" id="email" className={styles.mid_input} onChange={handleInputChange}
                                         onFocus={handleInputChange} />
 
                                 </div>
                                 <div>
                                     <label htmlFor="password">Senha</label>
-                                    <input type="password" name="password" id="password" className={styles.mid_input} onChange={handleInputChange}
+                                    <Input type="password" name="password" id="password" className={styles.mid_input} onChange={handleInputChange}
                                         onFocus={handleInputChange} />
 
                                 </div>

@@ -3,22 +3,24 @@ import Header from '../components/Header'
 import Head from 'next/head'
 import styles from '../components/Studentarea.module.css'
 import { useCookies } from 'react-cookie'
+import Logout from '../components/Logout'
 
 export default function Studentareatable() {
     const [cookies, setCookie] = useCookies();
-    const name = cookies.user['name']
-    console.log(name)
+    const name = cookies.user
     return (
         <>
             <Header />
             <Head />
+            <Logout />
+            <div className={ styles.container}>
             <a href="voltar">Voltar</a>
             <ul>
-    <li>Nome do aluno: {name}</li>
+                <li>Nome do aluno: {name}</li>
                 <li></li>
                 <li>Plano: Semestral B</li>
             </ul>
-            <table>
+            <table className={ styles.table_disposal}>
                 <tr>
                     <th>ID do treino</th>
                     <th>Treino</th>
@@ -27,14 +29,14 @@ export default function Studentareatable() {
                     <th>Descanso</th>
                 </tr>
                 <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td>1239</td>
+                    <td>teste 1</td>
+                    <td>blabla 2</td>
+                    <td>trosco 3</td>
+                    <td>mascatasr 4</td>
                 </tr>
             </table>
-            <a href="">Enviar por e-mail</a>
+            </div>
             <Footer />
         </>
     )
