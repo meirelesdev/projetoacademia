@@ -26,20 +26,7 @@ export default function Headerindex () {
                         <img src="assets/Icon/user.svg" id={styles["icon"]} />
                     </a>
                 </Link>
-                <div className={styles.btnlogin}>
-                    <form >
-                        <Link href="/login">
-                            <a>
-                            <button >Login</button>
-                            </a>
-                        </Link>
-                        <Link href="/register">
-                                <a>
-                                <button >Registre-se</button>
-                                </a>
-                        </Link>
-                    </form>
-                </div>
+                
                 <ul className={styles["navbar"]} >
                     <li><Link href="/" ><a>Home</a></Link></li>
                     <li><Link href="/sobrenos" ><a>Sobre nós</a></Link></li>
