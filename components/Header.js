@@ -1,7 +1,10 @@
 import styles from './Header.module.css'
 import Link from 'next/link' 
 
+
 export default () => {
+    
+
     return (
         <header>
             <Link  href="/">
@@ -17,6 +20,20 @@ export default () => {
                         <img srcSet="assets/Icon/user.svg" id={styles.icon} />
                     </a>
                 </Link>
+                <div className={styles.btnlogin}>
+                    <form >
+                        <Link href="/login">
+                            <a>
+                            <button >Login</button>
+                            </a>
+                        </Link>
+                        <Link href="/register">
+                                <a>
+                                <button >Registre-se</button>
+                                </a>
+                        </Link>
+                    </form>
+                </div>
 
                 <ul className={styles["navbar"]} >
                     <li><Link href="/" ><a>Home</a></Link></li>

@@ -9,7 +9,8 @@ import Link from 'next/link'
 
 
 export default function  Blog({ posts }) {
-    
+
+        
     return(
         <>
         <Header />
@@ -22,42 +23,38 @@ export default function  Blog({ posts }) {
                 
                 {posts.length >= 0 ?     
                 <section className={styles.category} >
-                        { posts.map( (post , index) => (
-                        <>
+                        { posts.map( (post , index) => (                       
+                    
+                        <div key={index} >
                         {index == 0 || posts[index-1].category != posts[index].category ? <h2>{post.category}</h2>: ''}
                         <div className={styles.post}>
                         <CompImg src={`${serverUrl}/posts/${post.id}/photo`} />
                             <div className={styles.contentPost}>
-                                <Link href={`/posts/${post.slug}`}>
+                                    <Link href="/posts/[id]" as={`/posts/${post.id}`} >
                                     <a><h3>{post.title}</h3></a>
                                 </Link>
                                 <p>{post.body}</p>
                             </div>
                         </div>
-                        </>
+                        </div>
                         ))}
                     </section>
                         : <div>Sem posts no momentos</div>}
                 
             </main>
-            <aside className={styles.adsBlog}>
-                <CompImg src="assets/Images/img-banner-planos.jpg"/>
-                <CompImg src="assets/Images/img-banner-planos.jpg"/>
-            </aside>
             </section>
         <Footer/>
         </>
     )
     
 }
-export async function getStaticProps( ctx ){
+export async function getStaticProps( ){
     let res = []
     try{
         res = await axios.get(`${serverUrl}/posts`)
     }catch(err){
         res.data = []
     }   
-
     return { 
         props :{
             posts: res.data

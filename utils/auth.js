@@ -19,7 +19,7 @@ export default async function handleAuthSSR(ctx) {
             header: {Authorization: `Bearer ${token}`}
         }
         await axios.get(serverUrl + '/admin/users', config)
-        .then( res => console.log(res) )
+        .then( res => res )
         .catch(err => console.log("Error na resposta: "+ err.message))
 
     }catch (err) {

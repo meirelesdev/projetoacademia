@@ -1,0 +1,44 @@
+.contatosContent{
+    display: flex;
+    flex-direction: column;
+}
+.headerContatos{
+    display: flex;
+    justify-content: flex-start;
+    
+    text-transform: uppercase;
+    font-weight: bold;
+    border-bottom: 2px solid #ccc;
+}
+.headerContatos li{
+    width: 100%;
+}
+.headerContatos li{
+    flex: 1;
+}
+.headerContatos li:last-child{
+    flex: 2;
+}
+.imgContent{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;    
+}
+.imgContent img{
+    width: 100%;    
+    max-width: 100px;
+    border-radius: 2px;
+    border: 2px solid #ccc;
+}
+.btnAdd{
+    width: 200px;
+    max-width: 200px;
+    margin: 20px;
+    padding: 10px;
+    border: none;
+    background-color: #f15000;
+    color: white;
+}
+.btnAdd:hover{
+    background-color: #b14109;
+}

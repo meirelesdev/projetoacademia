@@ -2,6 +2,7 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Input from '../components/Input'
 import Button from '../components/Button'
+import Banner from '../components/Banner'
 import styles from '../components/Contact.module.css'
 import { useState } from 'react'
 import axios from 'axios'
@@ -30,8 +31,12 @@ export default function Register(props){
     return(
         <>
         <Header />
+            
+                <Banner fotoBanner="assets/Images/banner-blog.jpg"titleBanner="Registre-se"  />
+    
             <form className={styles.form} onSubmit={handleRegister}>
                 <div className={styles.fields}>
+
                     <Input type="text" name="name" onChange={handleInputChange} onFocus={handleInputChange} label="Nome Completo"/>
                     <Input type="email" name="email" label="Email" onChange={handleInputChange}onFocus={handleInputChange} />
                     <Input type="password" name="password" label="Senha" onChange={handleInputChange} onFocus={handleInputChange}/>

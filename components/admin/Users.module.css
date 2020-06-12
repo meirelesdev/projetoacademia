@@ -1,0 +1,45 @@
+.usersContent{
+    display: flex;
+    flex-direction: column;
+}
+.headerUsers{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-bottom: 2px solid #ccc;
+}
+.headerUsers li{
+    text-align: center;
+    width: 100%;
+}
+.headerUsers li{
+    flex: 1;
+}
+.headerUsers li:last-child{
+    flex: 2;
+}
+.userContent{
+    display: flex;
+    justify-content: space-between;   
+    align-items: center; 
+}
+.userContent img{
+    width: 100%;    
+    max-width: 100px;
+    border-radius: 100%;
+    border: 2px solid #ccc;
+}
+.btnAdd{
+    width: 200px;
+    max-width: 200px;
+    margin: 20px;
+    padding: 10px;
+    border: none;
+    background-color: #f15000;
+    color: white;
+}
+.btnAdd:hover{
+    background-color: #b14109;
+}

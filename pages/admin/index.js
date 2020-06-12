@@ -1,25 +1,23 @@
-import handleAuthSSR from '../../utils/auth'
-import styles from '../../components/admin/Index.module.css'
+
 import Header from '../../components/admin/Header'
-import Footer from '../../components/admin/Footer'
+import { useCookies } from 'react-cookie'
+import { useState } from 'react'
 
-export default function Index(props) {
 
+export default function Index({users}) {
+
+    const [cookies, setCookie] = useCookies();
+    const name = cookies.user    
+    
     return (
-        <>
-        <Header />
-        <div className={styles.content}>
-
-        </div>
-        <Footer />
-        </>
+    <>
+        <Header textHeader="Bem Vindo ao Painel" userName={name}>
+            <p>Usuarios</p>
+                <p></p>
+        </Header>
+   
+    </>      
     )
 
 }
 
-Index.getInitialProps = async (ctx) => {
-    
-    let res = await handleAuthSSR(ctx)
-// console.log(res)
-    return { "res" : res}
-}

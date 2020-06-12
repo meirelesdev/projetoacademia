@@ -9,6 +9,7 @@ import Input from '../components/Input'
 import Button from '../components/Button'
 import styles from '../components/Contact.module.css'
 
+
 export default function Login(){
 
     const [values, setValues ] = useState({email: '', password:''})
@@ -42,7 +43,10 @@ export default function Login(){
     return(
         <>
             <Header />
-            <Banner fotoBanner="assets/Images/banner-blog.jpg" />
+            
+                <Banner fotoBanner="assets/Images/banner-blog.jpg" titleBanner="Login"  />
+            
+            
                 <form className={styles.form} onSubmit={handleLogin}>
                     <div className={styles.fields}>
                         <Input type="email" name="email" onChange={handleInputChange} onFocus={handleInputChange} label="Seu E-mail"/>
