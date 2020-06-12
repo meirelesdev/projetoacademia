@@ -19,7 +19,7 @@ export default function sideBar (props) {
                 <hr/>
                 <li><Link href="/contact" ><a>Contato</a></Link></li>
                 <li>
-                    <Link href="/studentArea" >
+                    <Link href="/login" >
                         <a className={styles["btnloginsidebar"]}>
                             <img srcSet="assets/Icon/user.svg" id={styles.icon} />
                         </a>
