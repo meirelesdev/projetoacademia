@@ -10,7 +10,6 @@ export default function Index() {
     return(
         <>
             <Header/>
-                
             <div className={styles["bannergrande"]}>
                 <div className={styles["textobanner"]}>
                     <p id={styles["primeiro"]}>

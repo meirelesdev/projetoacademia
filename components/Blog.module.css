@@ -1,3 +1,8 @@
+.blogBody{
+    display: flex;
+    max-width: 1200px;
+    margin: auto;
+}
 .container {
     display: flex;
     justify-content: flex-start;
@@ -5,7 +10,7 @@
     width: 100%;
     margin: 50px auto;
     padding: 2%;
-    max-width: 1450px;
+  
 }
 .container h2 {
     font-size: 2.1em;
@@ -31,6 +36,7 @@
 }
 .category h2{
     align-self: flex-start;
+    text-transform: capitalize;
 }
 .post{
     display: flex;
@@ -41,7 +47,11 @@
 }
 .post img{
     width: 100%;
+    max-height: 250px;
     max-width: 400px;
+}
+.post a{
+    text-decoration: none;
 }
 .post h3{
     color: #ff5100;
@@ -52,7 +62,16 @@
     padding: 2%;
     margin: 0;
 }
+.adsBlog{
+    display: none;
+}
 @media (min-width: 768px){
+    .blogBody{
+        display: flex;
+    }
+    .container{
+        flex: 1;
+    }
     .post{
         flex-direction: row;
     }
@@ -66,5 +85,16 @@
     }
     .post h3 {
         flex: 1;
+    }
+    .adsBlog{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 10px;
+        max-width: 200px;
+    }
+    .adsBlog img{
+        width: 100%;
+        padding: 10px;
     }
 }

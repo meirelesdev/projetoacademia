@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { useState } from 'react' 
 import Sidebar from '../components/Sidebar'
 
-export default () => {
+export default function Headerindex () {
 
     const [sidebarShow, setSidebar] = useState(false)
 

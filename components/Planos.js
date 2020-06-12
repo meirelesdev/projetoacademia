@@ -9,9 +9,9 @@ export default function Planos(props) {
                     <div className={styles.banner}>
                             
                         <div className={styles.quadrado}></div>
-                        <h1>Tabela de planos:</h1>
+                        <h1>Tabela de planos</h1>
   
-                        <CompImg src="assets/Images/bannerplanos.png" alt="banner" id={styles.bannermaior} />
+                        <CompImg src="assets/Images/banner-planos-ginastica.jpg" alt="banner" id={styles.bannermaior} />
                     </div>
 
                     {props.children}
@@ -51,7 +51,7 @@ export default function Planos(props) {
                         </div>
 
                         <div className={styles.imagemdireita}>
-                            <img src="assets/Images/personal.png" alt="personal" id={styles.personal}/>
+                            <img src="assets/Images/img-personal-trainer.jpg" alt="personal" id={styles.personal}/>
                         </div>
                     </div>
 
