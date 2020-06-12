@@ -140,3 +140,9 @@
         position: absolute;
     }
 }
+
+@media (max-width: 340px) {
+    .menu {
+        padding:6px 6px;
+    }
+}
