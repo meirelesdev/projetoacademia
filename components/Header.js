@@ -21,7 +21,7 @@ export default function Header () {
             
             <div className={styles["headerfundo"]}>
                 
-                <Link href="/studentArea" >
+                <Link href="/login" >
                     <a className={styles["btnlogin"]}>
                         <img srcSet="assets/Icon/user.svg" id={styles.icon} />
                     </a>

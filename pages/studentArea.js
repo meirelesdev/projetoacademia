@@ -9,7 +9,11 @@ import Link from 'next/link'
 import axios from 'axios'
 import { Cookies } from 'react-cookie'
 
+
+
 export default function Studentarea() {
+    const element = 'teste';
+    ReactDOM.render(element, document.getElementById('email').value);
     const cookies = new Cookies();
     const cookiesUser = new Cookies();
     
