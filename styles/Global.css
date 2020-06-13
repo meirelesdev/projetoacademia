@@ -18,7 +18,7 @@
 html, body {
     font-family: 'calibri';
     font-style: normal;
-    font-weight: 300;
+    /* font-weight: 300; */
     background-color: white;
     scroll-behavior: smooth;
     src: url('/assets/fonts/calibri.ttf') format('truetype');

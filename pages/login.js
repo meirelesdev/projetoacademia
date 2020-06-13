@@ -12,7 +12,6 @@ import styles from '../components/Contact.module.css'
 
 export default function Login(){
 
-
     const cookies = new Cookies();
     const cookiesUser = new Cookies();
 
@@ -27,28 +26,23 @@ export default function Login(){
 
     const handleLogin = e => {
         e.preventDefault()
-        //console.log(values)
-        axios.post('http://localhost:3333/auths', values)
+        axios.post(`${serverUrl}/auths`, values)
             .then(
                 (res) => {
-                    // console.log(res)
                     const tokenData = res.data.token
                     const user = res.data.user["name"]
-                    console.log(user)
                     const isAdmin = res.data.user.isAdmin
-                    //console.log('isadmin ',isAdmin)
                     cookies.set('token', tokenData)
                     cookiesUser.set('user', user)
-                    alert("Seja bem vindo! " + values.email)
                     switch (isAdmin) {
-                        case 1:
+                        case 0:
                             window.location.href = ("/studentAreaTable")
                             break;
-                        case 0:
-                            window.location.href = ("/")
+                        case 1:
+                            window.location.href = ("/admin")//admin
                             break;
                         default:
-                            alert('erro fatal')
+                            alert('erro fatal,contate um administrador')
                             break;
                     }
 
@@ -60,6 +54,7 @@ export default function Login(){
     return (
         <>
             <Header />
+<<<<<<< HEAD
             
                 <Banner fotoBanner="assets/Images/banner-blog.jpg" titleBanner="Login"  />
             
@@ -71,6 +66,19 @@ export default function Login(){
                     </div>            
                     <Button text="Logar"/>
                 </form>
+=======
+            <Banner fotoBanner="assets/Images/banner-blog.jpg" />
+            <form className={styles.form} onSubmit={handleLogin}>
+                <div className={styles.fields}>
+                    <Input type="email" name="email" onChange={handleInputChange} onFocus={handleInputChange} label="Seu E-mail" />
+                    <Input type="password" name="password" label="Senha" onChange={handleInputChange} onFocus={handleInputChange} />
+                </div>
+                <div>
+                    <a href="/register">Registre-se</a>
+                </div>
+                <Button text="Logar" />
+            </form>
+>>>>>>> 364ea3e08469b18d24e8c0558db2d3626ffec7a6
             <Footer />
         </>
     )
