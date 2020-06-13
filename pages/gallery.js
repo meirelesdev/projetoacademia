@@ -8,9 +8,7 @@ import CompImg from '../components/CompImg'
 import styles from '../components/Gallery.module.css'
 
 
-export default function Gallery(props) {
-    
-    const photos = props.photos
+export default function Gallery({ photos }) {
 
     return(
         <>
@@ -19,7 +17,7 @@ export default function Gallery(props) {
                         <h2 className={styles.callToAction}>Confira o que a Fitness Training tem a lhe oferecer, Conheça um pouco da nossa estrutura, e equipamentos para fazer você elevar seu nível de treino.</h2>
                     <div className={styles.container} id="init">
                         
-                        {photos? 
+                        { photos.length >= 0 ? 
                             photos.map((photo, index) => (                            
                                 <div className={styles.photo}  key={photo.id} >
                                     <CompImg alt={photo.title}  src={`${serverUrl}/gallery/${photo.id}`} />
@@ -27,7 +25,6 @@ export default function Gallery(props) {
                                </div>
                             )) : <div className={styles.noPhoto}>Sem fotos no momento</div>
                         }
-                        
                         {photos.map((photo, index) =>(                            
                                 <div className={styles.lightBox} id={`img${index}`}  key={photo.id} >
                                     <div className={styles.boxImg}>
@@ -51,13 +48,16 @@ export default function Gallery(props) {
     )
 }
 
-Gallery.getInitialProps = async (ctx)=>{
-    
-    let photos = []
-    
-    photos = await axios.get(`${serverUrl}/gallery`)
-        
+export async function  getStaticProps( ctx ){
+    let res = {}
+    try{
+        res = await axios.get(`${serverUrl}/gallery`)    
+    }catch(err){
+         res.data =  [] 
+    }  
     return { 
-        "photos": photos.data
+        props: {
+            photos: res.data
+        }
     }
 }

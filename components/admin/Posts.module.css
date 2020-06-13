@@ -1,0 +1,46 @@
+.postsContent{
+    display: flex;
+    flex-direction: column;
+}
+.headerPosts{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-bottom: 2px solid #ccc;
+}
+.headerPosts li{
+    text-align: center;
+    width: 100%;
+}
+.headerPosts li{
+    flex: 1;
+}
+.headerPosts li:last-child{
+    flex: 2;
+}
+.imgContent{
+    display: flex;
+    justify-content: space-between;   
+    align-items: center; 
+    margin: 15px;
+}
+.imgContent img{
+    width: 100%;    
+    max-width: 100px;
+    border-radius: 2px;
+    border: 2px solid #ccc;
+}
+.btnAdd{
+    width: 200px;
+    max-width: 200px;
+    margin: 20px;
+    padding: 10px;
+    border: none;
+    background-color: #f15000;
+    color: white;
+}
+.btnAdd:hover{
+    background-color: #b14109;
+}

@@ -1,9 +1,18 @@
 import styles from './Headerindex.module.css'
-import Link from 'next/link' 
+import Link from 'next/link'
+import { useState } from 'react' 
+import Sidebar from '../components/Sidebar'
 
-export default () => {
+export default function Headerindex () {
+
+    const [sidebarShow, setSidebar] = useState(false)
+
+    function toogleSidebar(e) {
+        setSidebar(!sidebarShow)
+    }
+
     return (
-        <>
+        <header>
             <Link  href="/">
                 <a>
                     <img className={styles["logo"]} src="assets/Logo/Fitness.svg" id="logo" alt="Logo" />
@@ -17,7 +26,7 @@ export default () => {
                         <img src="assets/Icon/user.svg" id={styles["icon"]} />
                     </a>
                 </Link>
-
+                
                 <ul className={styles["navbar"]} >
                     <li><Link href="/" ><a>Home</a></Link></li>
                     <li><Link href="/sobrenos" ><a>Sobre nós</a></Link></li>
@@ -27,7 +36,12 @@ export default () => {
                     <li><Link href="/contact" ><a>Contato</a></Link></li>
                 </ul>
 
-            </div><a></a>
-        </>
+            </div>
+
+            <button onClick={toogleSidebar} className={styles["menu"]}><img srcSet="assets/Icon/abrir.svg" id={styles.icon} /></button>
+
+            <Sidebar show={sidebarShow} toogleSidebar={toogleSidebar}/>
+
+        </header>
     )
 }

@@ -1,25 +1,26 @@
 .banner {
     display: flex;
     background-color: black;
+    /* background-color: black; */
     position: relative;
 }
 
 .banner #bannermaior {
-    opacity: 0.6;
+    /* opacity: 0.6; */
     width: 100%;
     height: 100%;
 }
 
 .banner h1{
     color: #f7c926;
-    font-family: 'calibri';
+    /* font-family: 'calibri'; */
     font-weight: bold;
     margin-left: 25px;
     position: absolute;
-    bottom: 25px;
+    bottom: 28px;
     left: 100px;
     z-index: 3;
-    font-size: 1.5em;
+    font-size: 2em;
 }
 
 .quadrado {
@@ -27,7 +28,7 @@
     height: 50px;
     background-color: #f7c926;
     position: absolute;
-    bottom: 50px;
+    bottom: 32px;
     left: 75px;
     z-index: 3;
 }
