@@ -1,4 +1,5 @@
 .banner {
+    display: flex;
     background-color: black;
     position: relative;
 }
