@@ -1,0 +1,43 @@
+.form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.form h2{
+    margin: 20px;
+    font-weight: bold;
+
+}
+.formPost {
+    width: 100%;
+    margin: 10px auto;
+    
+}
+.fieldsPosts{
+    width: 80%;
+    background-color: rebeccapurple;
+    display: flex;
+    flex-direction: column;
+}
+.formPost textarea {
+    width: 100%;
+    height: 350px;
+    border-bottom: 10px;
+}
+
+.fields{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 400px;
+}
+.fields input{
+    height: 20px;
+    margin-bottom: 5px;
+
+}
+.fields input[name="file"]{
+    margin-botton:15px;
+}

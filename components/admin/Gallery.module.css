@@ -22,7 +22,8 @@
     .imgContent{
         display: flex;
         justify-content: space-around;
-        align-items: center;    
+        align-items: center;
+        margin: 15px;
     }
     .imgContent img{
         width: 100%;    

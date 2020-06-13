@@ -4,11 +4,11 @@ import serverUrl from '../../../utils/env'
 import styles from '../../../components/admin/Gallery.module.css'
 import Button from  '../../../components/admin/Button'
 
-export default function Gallery(props){
+export default function Gallery({gallery}){
     return(
         <>
             <Header  textHeader="Galeria" >
-                <Button text="Adicionar"/>
+            <Button text="Adicionar" action="Adicionar" model="gallery" />
                 <div className={styles.galleryContent}>
                     <ul className={styles.headerGallery}>
                         <li>Imagem</li>
@@ -16,13 +16,17 @@ export default function Gallery(props){
                         <li>Descrição da Imagem</li>
                         <li>Ações</li>
                     </ul>
-                    <div className={styles.imgContent}>
-                        <img src="../assets/Images/blog1.jpg" alt=""/>
-                        <h4>Titulo da imagem</h4>
-                        <p>Descrição da imagem</p>
-                        <Button text="Editar"/>
-                        <Button text="Excluir"/>
-                    </div>
+                    
+                    {gallery.length > 0 ? 
+                    gallery.map((photo, index)=>(
+                        <div className={styles.imgContent}>
+                            <img src={`${serverUrl}/gallery/${photo.id}`} alt="" key={index} />
+                            <h4>{photo.title}</h4>
+                            <p>{photo.description}</p>
+                            <Button text="Editar" action="editar" />
+                            <Button text="Excluir" action="delete"/>
+                        </div>
+                        )): <div className={styles.imgContent}>Sem imagens no momento Clique no botao adicionar para adicionar Imagens</div>}
                 </div>    
             </Header>
             
@@ -31,15 +35,9 @@ export default function Gallery(props){
 }
 
 Gallery.getInitialProps = async (ctx) =>{
-    let res = []
-    try{
-        res = await axios.get(`${serverUrl}/gallery`)
-
-    }catch(err){
-        res = err
-    }
-    console.log(res.data)
+    let gallery = []
+        gallery = await axios.get(`${serverUrl}/gallery`)
     return {
-        props: res.data
+        "gallery": gallery.data
     }
 }

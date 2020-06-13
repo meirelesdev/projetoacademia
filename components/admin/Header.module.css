@@ -1,5 +1,5 @@
 .containerAdmin{
-    display: flex; 
+    display: flex;
 }
 .mainHeader{
     width: 50px;
@@ -12,8 +12,21 @@
 .mainHeader > a {
     text-align: center;
 }
+
+.mainAdmin{
+    display: flex;
+    flex: 1;
+    right: 100px;
+    flex-direction: column;
+    margin: 10px;
+}
+.mainAdmin hr{
+    width: 100%;
+    height: 2px;
+}
 .logoAdmin img{
     max-width: 50px;
+    margin-bottom: 15px;
 }
 .navMenu{
     display: none;
@@ -29,21 +42,22 @@
 .navMobile p {
     width: 100%;
     text-align: center;
-    
+    margin-bottom: 30px;
     border-bottom: 2px solid white;
 }
+.navMobile  img{
+    width: 30px;
+}
+.navMobile a img{
+    margin-bottom: 15px;
+}
 .navMenu p img{
-    width: 100%;
-    
+    width: 100%;    
     margin-bottom: 10px;
     padding-bottom: 5%;
     text-align: center;
 }
-.navMobile  img{
-    width: 25px;
-    margin-bottom: 5px;
-    color: #ccc;
-}
+
 
 
 
@@ -57,17 +71,6 @@
     .logoAdmin{
         text-align: center;
     } 
-    .mainAdmin{
-        display: flex;
-        flex: 1;
-        right: 100px;
-        flex-direction: column;
-        margin: 10px;
-    }
-    .mainAdmin hr{
-        width: 100%;
-        height: 2px;
-    }
     .mainHeader{
         display: flex;
         flex-direction: column;

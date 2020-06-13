@@ -1,12 +1,16 @@
 import Header from '../components/Headerindex'
+import CompImg from '../components/CompImg'
 import App from 'next/app'
 import Link from 'next/link'
 import Footer from '../components/Footer'
 import styles from '../components/Index.module.css'
+import axios from 'axios'
+import serverUrl from '../utils/env'
 
 
 
-export default function Index() {
+export default function Index({ posts }) {
+
     return(
         <>
             <Header/>
@@ -44,9 +48,20 @@ export default function Index() {
                 <div className={styles.quadrado}></div>
                 <h1 className={styles["titulo"]}>Últimas Postagens</h1>
 
-                {/* INSERIR COMPONETE DO BLOG AQUI ;) */}
-
-                <img id={styles["fundoblog"]} src="assets/Images/fundoblog.jpg"/>
+                {posts.length > 0 ? 
+                <section className={styles.sectionPost} >
+                {posts.map( (post , index) => (                
+                <div key={index} className={styles.containerPost}>
+                <CompImg src={`${serverUrl}/posts/${post.id}/photo`} />
+                    <div className={styles.contentPost}>
+                            <Link href="/blog" >
+                            <a><h3>{post.title}</h3></a>
+                        </Link>
+                        <p>{post.body}</p>
+                    </div>
+                </div>
+    ))}
+            </section>: <img id={styles.fundoblog} src="assets/Images/fundoblog.jpg"/>}
             </div>
 
             <div className={styles["nossosplanos"]}>
@@ -98,4 +113,17 @@ export default function Index() {
             <Footer/>
         </>
     )
+}
+export async function getStaticProps( ){
+    let res = []
+    try{
+        res = await axios.get(`${serverUrl}/posts`)
+    }catch(err){
+        res.data = []
+    }   
+    return { 
+        props :{
+            posts: res.data
+        }
+    }
 }

@@ -35,7 +35,7 @@ Contacts.getInitialProps = async (ctx) =>{
     try{
         res = await axios.get(`${serverUrl}/admin/contatcs`)
     }catch(err){
-        res = err
+        res = []
     }
 
     return {

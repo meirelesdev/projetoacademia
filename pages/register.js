@@ -25,7 +25,7 @@ export default function Register(props){
         alert(`Olá ${res.data.name} seus dados foram cadastrados ID: ${res.data.id}`)
         window.location.href=("/")
             
-        }).catch( err => alert("Deu ruim", err))
+        }).catch( err => alert("Deu ruim", err.message))
     }
 
     return(

@@ -7,11 +7,12 @@ import { useState } from 'react'
 export default function Index({users}) {
 
     const [cookies, setCookie] = useCookies();
-    const name = cookies.user    
+    const [ username, setUsername] = useState(cookies.user)
+    
     
     return (
     <>
-        <Header textHeader="Bem Vindo ao Painel" userName={name}>
+        <Header textHeader="Bem Vindo ao Painel" userName={username}>
             <p>Usuarios</p>
                 <p></p>
         </Header>
