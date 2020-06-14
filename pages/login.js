@@ -14,7 +14,7 @@ export default function Login(){
 
     const cookies = new Cookies();
     const cookiesUser = new Cookies();
-
+    const cookiesId = new Cookies();
     let [token, setToken] = useState(cookies.get('token') || null)
 
     const [values, setValues] = useState({ email: '', password: '' })
@@ -31,9 +31,11 @@ export default function Login(){
                 (res) => {
                     const tokenData = res.data.token
                     const user = res.data.user["name"]
+                    const id = res.data.user["mat_id"]
                     const isAdmin = res.data.user.isAdmin
                     cookies.set('token', tokenData)
                     cookiesUser.set('user', user)
+                    cookiesId.set('mat_id', id)
                     switch (isAdmin) {
                         case 0:
                             window.location.href = ("/studentAreaTable")
@@ -54,19 +56,7 @@ export default function Login(){
     return (
         <>
             <Header />
-<<<<<<< HEAD
-            
-                <Banner fotoBanner="assets/Images/banner-blog.jpg" titleBanner="Login"  />
-            
-            
-                <form className={styles.form} onSubmit={handleLogin}>
-                    <div className={styles.fields}>
-                        <Input type="email" name="email" onChange={handleInputChange} onFocus={handleInputChange} label="Seu E-mail"/>
-                        <Input type="password" name="password" label="Senha" onChange={handleInputChange} onFocus={handleInputChange}/>
-                    </div>            
-                    <Button text="Logar"/>
-                </form>
-=======
+        
             <Banner fotoBanner="assets/Images/banner-blog.jpg" />
             <form className={styles.form} onSubmit={handleLogin}>
                 <div className={styles.fields}>
@@ -78,7 +68,7 @@ export default function Login(){
                 </div>
                 <Button text="Logar" />
             </form>
->>>>>>> 364ea3e08469b18d24e8c0558db2d3626ffec7a6
+
             <Footer />
         </>
     )
