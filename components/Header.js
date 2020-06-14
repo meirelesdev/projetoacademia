@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import styles from './Header.module.css'
 import Link from 'next/link' 
 import { useState } from 'react'
@@ -12,6 +13,11 @@ export default function Header () {
     }
 
     return (
+    <>
+        <Head>
+            <link rel="shortcut icon" href="/favicon.svg" />
+            <title>Fitness Trainning</title>
+        </Head>
         <header>
             <Link  href="/">
                 <a>
@@ -43,5 +49,6 @@ export default function Header () {
             <Sidebar show={sidebarShow} toogleSidebar={toogleSidebar}/>
 
         </header>
+        </>
     )
 }
