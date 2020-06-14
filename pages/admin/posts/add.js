@@ -22,6 +22,7 @@ export default function Add(){
                 window.location.href=("/admin/posts")
             }).catch((err)=>{
                 alert("Deu ruim")
+                window.location.href=("/admin/posts")
             })
     }   
 
@@ -35,12 +36,12 @@ export default function Add(){
                 <div className={styles.fieldsPost}>
                     <Input type="file"  name="file" required="true"  label="Imagem do post"/>
                     <br/>
-                    <Input type="text"  name="title" label="Titulo do posts" />
+                    <Input type="text" required="true"  name="title" label="Titulo do posts" />
                     <br/>
-                    <Input type="text"  name = "category" label="Categoria"  />
+                    <Input type="text" required="true"  name = "category" label="Categoria"  />
                     <br/>
                     <label>Post</label>
-                    <textarea type="text"  name="body" row="40" cols="33" label="Post" ></textarea>
+                    <textarea type="text"  name="body" required="true" row="40" cols="33" label="Post" ></textarea>
                     
                 </div>            
                 <Button text="Postar Agora"/>
