@@ -50,14 +50,15 @@ export default function Index({ posts }) {
 
                 {posts.length > 0 ? 
                 <section className={styles.sectionPost} >
-                {posts.map( (post , index) => (                
+                {posts.map( (post , index) => (
+                                    
                 <div key={index} className={styles.containerPost}>
                 <CompImg src={`${serverUrl}/posts/${post.id}/photo`} />
                     <div className={styles.contentPost}>
-                            <Link href="/blog" >
+                        <Link href={`/posts/${post.id}/${post.slug}`} >
                             <a><h3>{post.title}</h3></a>
                         </Link>
-                        <p>{post.body}</p>
+                        <p>{post.body.substring(0,300)}</p>
                     </div>
                 </div>
     ))}
@@ -121,9 +122,15 @@ export async function getStaticProps( ){
     }catch(err){
         res.data = []
     }   
+    let postsHome = res.data.filter((post, index)=>{
+        if(index < 2){
+            return post
+        }
+    })
+    
     return { 
         props :{
-            posts: res.data
+            posts: postsHome
         }
     }
 }

@@ -9,7 +9,6 @@ import Link from 'next/link'
 
 
 export default function  Blog({ posts }) {
-
         
     return(
         <>
@@ -30,10 +29,10 @@ export default function  Blog({ posts }) {
                         <div className={styles.post}>
                         <CompImg src={`${serverUrl}/posts/${post.id}/photo`} />
                             <div className={styles.contentPost}>
-                                    <Link href="/posts/[id]" as={`/posts/${post.id}`} >
+                                <Link href={`/posts/${post.id}/${post.slug}`} >
                                     <a><h3>{post.title}</h3></a>
                                 </Link>
-                                <p>{post.body}</p>
+                                <p>{post.body.substring(0,300)}</p>
                             </div>
                         </div>
                         </div>

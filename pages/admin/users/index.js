@@ -28,13 +28,13 @@ export default function Users({ users }){
                 </div>
                 {users.length > 0 ? 
                 users.map((user, index)=>(
-                    <div className={styles.userContent}>
-                        <img src={`../assets/Images/${user.photo}`} alt="" key={index} />
+                    <div className={styles.userContent} key={index}>
+                        <img src={`/assets/Images/${user.photo}`} alt=""  />
                         <h4>{user.name}</h4>
                         <p>{user.email}</p>
-                        <p>{user.isAdmin}</p>
-                        <Button text="Editar" action="editar" />
-                        <Button text="Excluir" action="delete"/>
+                        <p>{user.isAdmin? "Sim":"Aluno"}</p>
+                        <Button text="Editar" action="editar" id={user.id} model="users" />
+                        <Button text="Excluir" action="delete" id={user.id} model="users" />
                     </div>
                     ))
                     

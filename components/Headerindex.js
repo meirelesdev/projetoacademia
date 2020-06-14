@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import styles from './Headerindex.module.css'
 import Link from 'next/link'
 import { useState } from 'react' 
@@ -12,10 +13,15 @@ export default function Headerindex () {
     }
 
     return (
+        <>
+        <Head>
+            <link rel="shortcut icon" href="/favicon.svg" />
+            <title>Fitness Trainning</title>
+        </Head>
         <header>
             <Link  href="/">
                 <a>
-                    <img className={styles["logo"]} src="assets/Logo/Fitness.svg" id="logo" alt="Logo" />
+                    <img className={styles["logo"]} srcSet="/assets/Logo/Fitness.svg" id="logo" alt="Logo" />
                 </a>
             </Link>
             
@@ -23,7 +29,7 @@ export default function Headerindex () {
                 
                 <Link href="/studentArea" >
                     <a className={styles["btnlogin"]}>
-                        <img src="assets/Icon/user.svg" id={styles["icon"]} />
+                        <img srcSet="/assets/Icon/user.svg" id={styles["icon"]} />
                     </a>
                 </Link>
                 
@@ -38,10 +44,11 @@ export default function Headerindex () {
 
             </div>
 
-            <button onClick={toogleSidebar} className={styles["menu"]}><img srcSet="assets/Icon/abrir.svg" id={styles.icon} /></button>
+            <button onClick={toogleSidebar} className={styles["menu"]}><img srcSet="/assets/Icon/abrir.svg" id={styles.icon} /></button>
 
             <Sidebar show={sidebarShow} toogleSidebar={toogleSidebar}/>
 
         </header>
+        </>
     )
 }

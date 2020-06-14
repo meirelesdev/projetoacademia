@@ -8,7 +8,7 @@ export default function Gallery({gallery}){
     return(
         <>
             <Header  textHeader="Galeria" >
-            <Button text="Adicionar" action="Adicionar" model="gallery" />
+            <Button text="Adicionar Foto" action="Adicionar" model="gallery" />
                 <div className={styles.galleryContent}>
                     <ul className={styles.headerGallery}>
                         <li>Imagem</li>
@@ -19,12 +19,12 @@ export default function Gallery({gallery}){
                     
                     {gallery.length > 0 ? 
                     gallery.map((photo, index)=>(
-                        <div className={styles.imgContent}>
-                            <img src={`${serverUrl}/gallery/${photo.id}`} alt="" key={index} />
+                        <div className={styles.imgContent} key={index}>
+                            <img src={`${serverUrl}/gallery/${photo.id}`} alt=""  />
                             <h4>{photo.title}</h4>
                             <p>{photo.description}</p>
-                            <Button text="Editar" action="editar" />
-                            <Button text="Excluir" action="delete"/>
+                            <Button text="Editar" action="editar" id={photo.id} model="gallery" />
+                            <Button text="Excluir" action="delete" id={photo.id} model="gallery" />
                         </div>
                         )): <div className={styles.imgContent}>Sem imagens no momento Clique no botao adicionar para adicionar Imagens</div>}
                 </div>    

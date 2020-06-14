@@ -11,8 +11,7 @@ const config = {
 
 export default function Add(){
  
-
-    const handleFormData = async e => {
+     const handleFormData = async e => {
             e.preventDefault()
           
         let  formulario = new FormData(e.target)
@@ -29,15 +28,19 @@ export default function Add(){
     return(
         
         <Header textHeader="Novo Post" >
+          
     
             <form className={styles.formPost} onSubmit={handleFormData}>
                 <h2>Escrever novo Post</h2>
                 <div className={styles.fieldsPost}>
-                    <Input type="file" name="file"  label="Imagem do post"/>
-                    <Input type="text" name="title" label="Titulo do posts"  />
-                    <Input type="text" name="category" label="Categoria"  />
+                    <Input type="file"  name="file" required="true"  label="Imagem do post"/>
+                    <br/>
+                    <Input type="text"  name="title" label="Titulo do posts" />
+                    <br/>
+                    <Input type="text"  name = "category" label="Categoria"  />
+                    <br/>
                     <label>Post</label>
-                    <textarea type="text" name="body" row="40" cols="33" label="Post" ></textarea>
+                    <textarea type="text"  name="body" row="40" cols="33" label="Post" ></textarea>
                     
                 </div>            
                 <Button text="Postar Agora"/>
