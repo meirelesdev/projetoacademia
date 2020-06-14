@@ -24,6 +24,7 @@
 .form {
     flex-direction: column;
     padding: 1em;
+    box-sizing: border-box;
     width: 100%;
 }
 
@@ -79,7 +80,7 @@
 .localContact .local .map {
     width:100%;
     height: 300px;
-    padding: 15px;
+    padding: 0px;
 }
 
 .localContact .phoneContat {

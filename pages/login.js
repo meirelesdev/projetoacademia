@@ -54,19 +54,6 @@ export default function Login(){
     return (
         <>
             <Header />
-<<<<<<< HEAD
-            
-                <Banner fotoBanner="assets/Images/banner-blog.jpg" titleBanner="Login"  />
-            
-            
-                <form className={styles.form} onSubmit={handleLogin}>
-                    <div className={styles.fields}>
-                        <Input type="email" name="email" onChange={handleInputChange} onFocus={handleInputChange} label="Seu E-mail"/>
-                        <Input type="password" name="password" label="Senha" onChange={handleInputChange} onFocus={handleInputChange}/>
-                    </div>            
-                    <Button text="Logar"/>
-                </form>
-=======
             <Banner fotoBanner="assets/Images/banner-blog.jpg" />
             <form className={styles.form} onSubmit={handleLogin}>
                 <div className={styles.fields}>
@@ -78,7 +65,6 @@ export default function Login(){
                 </div>
                 <Button text="Logar" />
             </form>
->>>>>>> 364ea3e08469b18d24e8c0558db2d3626ffec7a6
             <Footer />
         </>
     )
