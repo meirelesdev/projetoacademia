@@ -58,8 +58,8 @@ export default function Login(){
             <Banner fotoBanner="assets/Images/banner-blog.jpg" />
             <form className={styles.form} onSubmit={handleLogin}>
                 <div className={styles.fields}>
-                    <Input type="email" name="email" required="true" onChange={handleInputChange} onFocus={handleInputChange} label="Seu E-mail" />
-                    <Input type="password" name="password" required="true" label="Senha" onChange={handleInputChange} onFocus={handleInputChange} />
+                    <Input type="email" name="email" required={true} onChange={handleInputChange} onFocus={handleInputChange} label="Seu E-mail" />
+                    <Input type="password" name="password" required={true} label="Senha" onChange={handleInputChange} onFocus={handleInputChange} />
                 </div>
                 <div>
                     <Link href="/register">

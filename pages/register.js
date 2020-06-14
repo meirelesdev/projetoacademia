@@ -40,9 +40,9 @@ export default function Register(props){
             <form className={styles.form} onSubmit={handleRegister}>
                 <div className={styles.fields}>
 
-                    <Input type="text" name="name" onChange={handleInputChange} required="true" onFocus={handleInputChange} label="Nome Completo"/>
-                    <Input type="email" name="email" label="Email" required="true" onChange={handleInputChange}onFocus={handleInputChange} />
-                    <Input type="password" name="password" label="Senha" required="true" onChange={handleInputChange} onFocus={handleInputChange}/>
+                    <Input type="text" name="name" onChange={handleInputChange} required={true} onFocus={handleInputChange} label="Nome Completo"/>
+                    <Input type="email" name="email" label="Email" required={true} onChange={handleInputChange}onFocus={handleInputChange} />
+                    <Input type="password" name="password" label="Senha" required={true} onChange={handleInputChange} onFocus={handleInputChange}/>
                 </div>            
                 <Button text="Cadastrar-se"/>
             </form>
