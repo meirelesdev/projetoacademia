@@ -12,14 +12,14 @@ export default function Planos(props) {
 
             <h3 id={styles.middle}>ATIVIDADES</h3>
             <ul>
-                <li><img src="assets/Icon/seta2.svg" id={styles.iconseta} />Área de musculação e aeróbicos</li>
-                <li><img src="assets/Icon/seta2.svg" id={styles.iconseta} />Aulas especiais</li>
+                <li><img srcSet="/assets/Icon/seta2.svg" id={styles.iconseta} />Área de musculação e aeróbicos</li>
+                <li><img srcSet="/assets/Icon/seta2.svg" id={styles.iconseta} />Aulas especiais</li>
             </ul>
             <h3>BENEFÍCIOS INCLUSOS</h3>
             <ul>
-                <li><img src="assets/Icon/seta2.svg" id={styles.iconseta} />Área de musculação e aeróbicos</li>
-                <li><img src="assets/Icon/seta2.svg" id={styles.iconseta} />Aulas de Ginastica</li>
-                <li><img src="assets/Icon/seta2.svg" id={styles.iconseta} />Sem taxa de cancelamento</li>
+                <li><img srcSet="/assets/Icon/seta2.svg" id={styles.iconseta} />Área de musculação e aeróbicos</li>
+                <li><img srcSet="/assets/Icon/seta2.svg" id={styles.iconseta} />Aulas de Ginastica</li>
+                <li><img srcSet="/assets/Icon/seta2.svg" id={styles.iconseta} />Sem taxa de cancelamento</li>
             </ul>
             <a href="/contact" className={styles.buttonassinar}>Assinar agora</a>
         </div>

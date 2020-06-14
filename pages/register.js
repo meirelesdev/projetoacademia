@@ -9,7 +9,7 @@ import axios from 'axios'
 import serverUrl from '../utils/env'
 
 export default function Register(props){
-    const [values, setValues ] = useState({name:'', email:'',password:'', birth_at:'', level:'1', photo:'user.png'})
+    const [values, setValues ] = useState({name:'', email:'',password:'',isAdmin:'0', photo:'user.png'})
 
     const handleInputChange = e => {
         const { name, value }= e.target
@@ -23,6 +23,9 @@ export default function Register(props){
         axios.post(`${serverUrl}/users`, values)
         .then( res => {
         alert(`Olá ${res.data.name} seus dados foram cadastrados ID: ${res.data.id}`)
+        if(res.data.isadmin){
+            window.location.href=('/admin')
+        }
         window.location.href=("/")
             
         }).catch( err => alert("Deu ruim", err.message))
@@ -37,9 +40,9 @@ export default function Register(props){
             <form className={styles.form} onSubmit={handleRegister}>
                 <div className={styles.fields}>
 
-                    <Input type="text" name="name" onChange={handleInputChange} onFocus={handleInputChange} label="Nome Completo"/>
-                    <Input type="email" name="email" label="Email" onChange={handleInputChange}onFocus={handleInputChange} />
-                    <Input type="password" name="password" label="Senha" onChange={handleInputChange} onFocus={handleInputChange}/>
+                    <Input type="text" name="name" onChange={handleInputChange} required={true} onFocus={handleInputChange} label="Nome Completo"/>
+                    <Input type="email" name="email" label="Email" required={true} onChange={handleInputChange}onFocus={handleInputChange} />
+                    <Input type="password" name="password" label="Senha" required={true} onChange={handleInputChange} onFocus={handleInputChange}/>
                 </div>            
                 <Button text="Cadastrar-se"/>
             </form>

@@ -6,7 +6,7 @@ export default function sideBar (props) {
     return (
         <div className={styles.sidebar + ' ' + (props.show ? styles.show : '')}>
             <ul>
-                <button onClick={props.toogleSidebar} className={styles["fecharmenu"]}><img srcSet="assets/Icon/fechar.svg" id={styles.icon} /></button>
+                <button onClick={props.toogleSidebar} className={styles["fecharmenu"]}><img srcSet="/assets/Icon/fechar.svg" id={styles.icon} /></button>
                 <li><Link href="/" ><a>Home</a></Link></li>
                 <hr/>
                 <li><Link href="/sobrenos" ><a>Sobre nós</a></Link></li>
@@ -21,7 +21,7 @@ export default function sideBar (props) {
                 <li>
                     <Link href="/login" >
                         <a className={styles["btnloginsidebar"]}>
-                            <img srcSet="assets/Icon/user.svg" id={styles.icon} />
+                            <img srcSet="/assets/Icon/user.svg" id={styles.icon} />
                         </a>
                     </Link>
                 </li>
