@@ -25,24 +25,20 @@
 
 
 .table_disposal {
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     width: 100%;
   }
-  
+  .table_disposal td{
+    background: #e6dddd;
+  }
   .table_disposal td, .table_disposal th {
     border: 1px solid #ddd;
     padding: 8px;
   }
-  
-  .table_disposal tr:nth-child(even){background-color: #f2f2f2;}
-  
-  .table_disposal tr:hover {background-color: #ddd;}
   
   .table_disposal th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
     background-color: #F15000;
-    color: white;
   }
