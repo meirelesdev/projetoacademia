@@ -1,3 +1,40 @@
+.sectionPost{
+    display: flex;
+    flex-direction: column;
+    background-image: url("/assets/Images/fundoblog.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.sectionPost div{
+    display: flex;    
+    padding: 20px;
+    color: white;
+    
+}
+.contentPost h3 {
+    margin: 20px;
+    font-size: 22px;
+}
+.sectionPost .contentPost{
+    display: flex;
+    max-width: 1100px;
+    flex-direction: column;
+    background-image: none;
+    margin: 10px;
+}
+.sectionPost img{
+    margin: 10px;
+    padding: 15px;
+    width: 100%;
+    max-width:300px;
+    max-height: 150px;
+
+}
+.sectionPost .contentPost a {
+    text-decoration: none;
+    color: #f15000;
+    font-weight: bold;
+}
 .bannergrande {
     background-color: black;
     position: relative;
@@ -318,6 +355,11 @@
 @media (max-width: 720px) {
     .textobanner #primeiro {
         font-size: 1.5em;
+    }
+    .containerPost{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     
     .textobanner #terceiro {

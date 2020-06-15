@@ -17,6 +17,7 @@
     color: #ff5100;
     text-align: left;
     margin: 20px 0;
+    text-transform: capitalize;
     padding: 2%;
 }
 .callToAction{
@@ -65,7 +66,51 @@
 .adsBlog{
     display: none;
 }
+.postSingle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    padding: 2%;
+}
+
+.thePost h2{
+    color: #f15000;
+    text-transform: capitalize;
+}
+.thePost img{
+    width: 100%;
+    max-width: 80vh;
+    padding: 2%;
+    box-sizing: border-box;
+}
+.thePost h3{
+    color: #ff5100;
+    text-transform: capitalize;
+}
+.thePost p{
+    line-height: 30px;
+    text-indent: 50px;
+    padding: 2%;
+}
+.postSingle .thePost{
+    display: flex ;
+    flex-direction: column;
+}
+
 @media (min-width: 768px){
+    .postSingle{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .thePost {
+        flex: 1;
+    }
+
+    .postSingle .thePost img{
+        width: 100%;
+       max-width: 80vh;
+    }
     .blogBody{
         display: flex;
     }
@@ -80,18 +125,27 @@
         flex-direction: column;
         margin: 10px;
     }
+    .contentPost button{
+        background: none;
+        outline: none;
+        text-align: left;
+        border: none;
+    }
     .post img{
         width: 30%;
     }
     .post h3 {
         flex: 1;
+        text-transform: capitalize;
     }
     .adsBlog{
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         margin: 10px;
+        margin-top: 50px;
         max-width: 200px;
+        flex: 2;
     }
     .adsBlog img{
         width: 100%;

@@ -1,0 +1,76 @@
+.form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.form h2{
+    margin: 20px;
+    font-weight: bold;
+
+}
+.mainPosts{
+    display: flex;
+    flex-direction: column;
+}
+.formPost {
+    width: 100%;
+    margin: 10px auto;
+    
+}
+.fieldsPost{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formPost textarea {
+    width: 100%;
+    height: 350px;
+    border-bottom: 10px;
+}
+
+.fields{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 400px;
+}
+.fields input{
+    height: 20px;
+    margin-bottom: 5px;
+
+}
+.fields input[type=file] {
+    margin-bottom:15px;
+}
+.viewEditPost{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.viewEditPost img{
+    width: 100%;
+    max-width: 100px;
+    border: 1px solid #ccc;
+}
+@media (min-width: 776px){
+    .mainPosts{
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+    .formPost {
+        width: 50%;
+        margin: 10px auto;
+        
+    }
+}
+/* <div className={styles.viewEditPost}>
+<img srcSet={`${serverUrl}/posts/${props.post.id}/photo`} />
+<h3>{props.post.title}</h3>
+<div>{props.post.category}</div>
+<p>{props.post.body}</p>
+</div> */
