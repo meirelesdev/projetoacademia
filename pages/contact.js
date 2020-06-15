@@ -23,28 +23,29 @@ import { useRouter } from 'next/router'
     
 <Header />
 */
-export default function Contact() {
+const initialState = {name: '', phone: '', email: '', message: ''}
 
-    const [values, setValues] = useState({name: '', phone: '', email: '', message: ''})
+export default function Contact() {
+const Router = useRouter()
+
+    const [values, setValues] = useState(initialState)
 
     const handleInputChange = e =>{
         const {name, value} = e.target
 
         setValues({...values, [name]:value})
-        console.log(name, value)
     }
 
-    const handleFormSubmit = e =>{
+    const handleFormSubmit =  e =>{
         e.preventDefault()
         axios.post(`${serverUrl}/admin/contacts`, values)
-        .then(
-            (res)=> {
-                // console.log('Usuário autenticado!')
+        .then(res=> {
+                  // console.log('Usuário autenticado!')
                 alert('Sua mensagem foi enviada com Sucesso!')
-                Router.push("/contact")
+               setValues(initialState)
+               
             }
-        )
-        .catch(err => alert('Deu ruim', err.message))
+        ).catch(err => alert('Deu ruim', err.message))
     }
 
 
@@ -63,11 +64,11 @@ export default function Contact() {
                     </div>
                     <form className={styles.form} onSubmit={handleFormSubmit}>
                         <div className={styles.fields}>
-                            <Input type="text" name="name" label="Nome Completo" onChange={handleInputChange} onFocus={handleInputChange}/>
-                            <Input type="email" name="email" label="Email" onChange={handleInputChange} onFocus={handleInputChange} />
-                            <Input type="tel" name="phone" label="Celular" onChange={handleInputChange} onFocus={handleInputChange} />
+                            <Input type="text" name="name" value={values.name} label="Nome Completo" onChange={handleInputChange} onFocus={handleInputChange}/>
+                            <Input type="email" name="email" label="Email" value={values.email} onChange={handleInputChange} onFocus={handleInputChange} />
+                            <Input type="tel" name="phone" label="Celular" value={values.phone} onChange={handleInputChange} onFocus={handleInputChange} />
                         </div>
-                        <Textarea name="message" label="Mensagem" onChange={handleInputChange} onFocus={handleInputChange} /> 
+                        <Textarea name="message" label="Mensagem" value={values.message} onChange={handleInputChange} onFocus={handleInputChange} /> 
                         <Button text="Enviar"/>
                     </form>
                 </div>

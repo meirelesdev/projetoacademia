@@ -6,9 +6,15 @@ import styles from '../../../components/Blog.module.css'
 import serverUrl from '../../../utils/env'
 import { useRouter } from 'next/router'
 import Axios from 'axios'
+import { useRef, useEffect } from 'react'
 
 export default function Post(props) {
-   
+
+    const ref = useRef()
+   useEffect(()=>{
+       ref.current.innerHTML = props.post.body
+   },[])
+
     return(
         <>
         <Header />
@@ -19,7 +25,7 @@ export default function Post(props) {
                         <h2>{props.post.category}</h2>
                         <CompImg srcSet={`${serverUrl}/posts/${props.post.id}/photo`} />            
                             <h3>{props.post.title}</h3>
-                            <p>{props.post.body}</p>
+                            <p ref={ref}></p>
                     </div>
                 <aside className={styles.adsBlog} >
                     <CompImg src="/assets/Images/img-banner-planos.jpg"/>
