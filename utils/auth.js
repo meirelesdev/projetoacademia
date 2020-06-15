@@ -6,32 +6,26 @@ import serverUrl from './env'
 const cookies = new Cookies()
 
 export default async function handleAuthSSR(ctx) {
-    
+
     let token = null
-    
-    if(ctx.req.cookie) {
-        token = ctx.req.headers.cookie.replace(/(?:(?:^|.*;\s*)token\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+    let user = null
+    if(ctx?.req?.headers?.cookie) {
+        token = ctx.req.headers.cookie.replace(/(?:(?:^|.*;\s*)token\s*\=\s*([^;]*).*$)|^.*$/, "$1")
     } else {
         token = cookies.get('token')
     }
-    try{
-        const config = {
-            header: {Authorization: `Bearer ${token}`}
-        }
-        await axios.get(serverUrl + '/admin/users', config)
-        .then( res => res )
-        .catch(err => console.log("Error na resposta: "+ err.message))
-
-    }catch (err) {
-        console.log('Usuário sem permissão, redirecionando!')
-
-        if(ctx.res){
-            ctx.res.writeHead(302, {
-                Location: '/'
-            })
+    try {
+        const config = { headers: { Authorization: `Bearer ${token}` } }
+        const resp = await axios.get(serverUrl + '/auths/profile', config)
+        user = resp.data
+    } catch (err) {
+        if (ctx.res) {
+            ctx.res.writeHead(302, { Location: '/login' })
             ctx.res.end()
-        }else {
-            Router.push('/admin')
+        } else {
+            Router.push('/login')
         }
     }
+
+    return user
 }

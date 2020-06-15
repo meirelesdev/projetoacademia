@@ -1,11 +1,21 @@
 import Head from 'next/head'
-import App from 'next/app'
 import styles from './Header.module.css'
-import Button from './Button'
 import Link from 'next/link'
+import { Cookies } from 'react-cookie'
+import { useRouter } from 'next/router'
 
 
 export default function Header(props){
+    const Router = useRouter()
+
+    function logout(e) {
+        const cookies = new Cookies()
+        e.preventDefault()
+        cookies.remove('token')
+        cookies.remove('user')
+        cookies.remove('typet')
+        Router.push('/')
+    }
     
     return(
         
@@ -54,13 +64,11 @@ export default function Header(props){
                     <a  title="Galleria"><img srcSet="/assets/Icon/icon-gallery.svg"/></a>
                     </Link>
                 </nav>
-                <Link href="/">
-                    <a  title="Sair" className={styles.logOut}><img srcSet="/assets/Icon/icon-logout.svg"/></a>
-                </Link>
+                <a onClick={logout} title="Sair" className={styles.logOut}><img srcSet="/assets/Icon/icon-logout.svg"/></a>
                 
             </header>
             <div className={styles.mainAdmin}>
-                    <p>Ola, {props.userName ? props.userName: "Admin"}!</p>
+                    <p>Ola, {props.userName ? props.userName: "Indefinido"}!</p>
                     <h1>{props.textHeader}</h1>
                     <hr/>
                     

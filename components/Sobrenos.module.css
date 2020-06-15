@@ -1,0 +1,45 @@
+.textosobre {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.textosobre h1 {
+    text-align: center;
+    width: 70%;
+    font-weight: bold;
+    font-size: 80px;
+    padding-top: 5%;
+    color: #f15000; 
+    margin-block-end: 0;
+}
+
+.textosobre h2 {
+    text-align: center;
+    width: 70%;
+    padding-top: 0;
+    font-weight: bold;
+    font-size: 30px;
+    color: #f15000;
+    margin-block-start: 0;
+}
+
+.textosobre p {
+    font-size: 30px;
+    text-align: justify;
+    text-justify: inter-word;
+    padding-bottom: 20px;
+}
+
+.textosobre .paragrafos {
+    width: 70%;
+    padding-block-end: 40px;
+    text-indent: 3em;
+}
+
+.textosobre .paragrafos a {
+    text-decoration: none;
+    color: #f15000;
+    font-weight: bold;
+}
