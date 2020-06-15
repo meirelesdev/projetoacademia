@@ -1,6 +1,4 @@
 import styles from './Planos.module.css'
-import CompImg from './CompImg'
-
 
 export default function Planos(props) {
     return (

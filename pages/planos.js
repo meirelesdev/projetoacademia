@@ -6,11 +6,11 @@ import serverUrl from '../utils/env'
 
 export async function getStaticProps() {
 
-    const resp = await axios.get(serverUrl + '/plans')
+    const resposta = await axios.get(serverUrl + '/plans')
 
     return {
         props: {
-            listaPlanos: resp.data
+            listaPlanos: resposta.data
         }
     }
 }
