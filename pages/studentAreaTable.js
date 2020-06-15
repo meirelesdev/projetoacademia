@@ -7,14 +7,12 @@ import styles from '../components/Studentarea.module.css'
 import { useCookies } from 'react-cookie'
 import Logout from '../components/Logout'
 
-export default function Studentareatable({trainings}) {
+export default function Studentareatable() {
     const [cookies, setCookie] = useCookies();
     const name = cookies.user
     const typet = cookies.typet
-
+    const treinos = cookies.treinos
     console.log(treinos)
-
-    //const bla = teste.res
     return (
         <>
             <Header />
@@ -29,21 +27,12 @@ export default function Studentareatable({trainings}) {
                         <th>Número do treino</th>
                         <th>Treino</th>
                     </tr>
-    <tr>{trainings.name_training}</tr>
-    <tr>{trainings.description}</tr>
+    <tr></tr>
                     
+
                 </table>
             </div>
             <Footer />
         </>
     )
-}
-
-Studentareatable.getInitialProps = async (ctx) => {
-    let trainings = []
-
-    trainings = await axios.get(`${serverUrl}/training`)
-
-    return { "training": trainings.data}
-
 }

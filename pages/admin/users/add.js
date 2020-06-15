@@ -8,9 +8,9 @@ import serverUrl from '../../../utils/env'
 
 
 
-export default function Add(){
+export default function Add({ training}){
     
-    const [values, setValues ] = useState({name:'', email:'',password:'', isAdmin:'', photo:'user.png'})
+    const [values, setValues ] = useState({name:'', email:'',password:'', isAdmin:'', photo:'user.png', type_training:''})
 
     const handleInputChange = e => {
         const { name, value }= e.target
@@ -39,9 +39,29 @@ export default function Add(){
                     <Input type="email" name="email" label="Email" onChange={handleInputChange}onFocus={handleInputChange} />
                     <Input type="password" name="password" label="Senha" onChange={handleInputChange} onFocus={handleInputChange}/>
                     <Input type="number"min="0" max="1" onChange={handleInputChange} onFocus={handleInputChange}  name="isAdmin" label="Administrativo?"/>
+                    <Input type="text" min="0" max="1" onChange={handleInputChange} onFocus={handleInputChange}  name="isAdmin" label="Administrativo?"/>
+                    <select name="type_training" label="Tipo do treino">
+                            {training.length > 0 ? 
+                training.map((trainings, index)=>(
+                <option key={index} value={trainings.type_training}>{trainings.type_training}</option>
+                    ))
+                    
+            : <p>Sem treinamentos cadastrados</p>}
+                        </select>
+                
                 </div>            
                 <Button text="Salvar"/>
             </form>
         </Header>
     )
+}
+
+Add.getInitialProps = async ( ctx) =>{
+
+    let training = []
+
+    training = await axios.get(`${serverUrl}/training`)
+    return {
+        "training": training.data
+    }
 }

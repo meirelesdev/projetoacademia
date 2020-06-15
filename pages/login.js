@@ -36,9 +36,14 @@ export default function Login() {
                     const isAdmin = res.data.user.isAdmin
                     cookies.set('token', tokenData)
                     cookiesUser.set('user', user)
-                    cookiesType.set('typet', id)
+                    cookiesType.set('typet', typet)
                     switch (isAdmin) {
                         case 0:
+                            axios.get(`${serverUrl}/trainings/${typet}`).then((res) => {
+                                const resposta = res.data
+                                const cookiesInfo = new Cookies();
+                                cookiesInfo.set('treinos', resposta)
+                            })
                             window.location.href = ("/studentAreaTable")
                             break;
                         case 1:
