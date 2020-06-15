@@ -35,6 +35,9 @@ export default function Header(props){
                     <Link href="/admin/gallery">
                         <a>Galeria</a>
                     </Link>
+                    <Link href="/admin/trainings">
+                        <a>Treinamentos</a>
+                    </Link>
                 </nav>
                 <nav className={styles.navMobile}>                    
                     <p><img srcSet="/assets/Icon/icon-maneger.svg" /></p>
