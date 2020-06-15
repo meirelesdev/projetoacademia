@@ -8,6 +8,7 @@ import Banner from '../components/Banner'
 import serverUrl from '../utils/env'
 import React, {useState} from 'react';
 import axios from 'axios';
+import { useRouter } from 'next/router'
 
 
 /* Idéia da estrutura final
@@ -40,7 +41,7 @@ export default function Contact() {
             (res)=> {
                 // console.log('Usuário autenticado!')
                 alert('Sua mensagem foi enviada com Sucesso!')
-                window.location.href=("/contact")
+                Router.push("/contact")
             }
         )
         .catch(err => alert('Deu ruim', err.message))

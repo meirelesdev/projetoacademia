@@ -5,10 +5,13 @@ import Button from '../components/Button'
 import Banner from '../components/Banner'
 import styles from '../components/Contact.module.css'
 import { useState } from 'react'
+import { useRouter } from 'next/router'
 import axios from 'axios'
 import serverUrl from '../utils/env'
 
 export default function Register(props){
+    const Router = useRouter()
+
     const [values, setValues ] = useState({name:'', email:'',password:'',isAdmin:'0', photo:'user.png'})
 
     const handleInputChange = e => {
@@ -24,9 +27,9 @@ export default function Register(props){
         .then( res => {
         alert(`Olá ${res.data.name} seus dados foram cadastrados ID: ${res.data.id}`)
         if(res.data.isadmin){
-            window.location.href=('/admin')
+            Router.push('/admin')
         }
-        window.location.href=("/")
+        Router.push("/")
             
         }).catch( err => alert("Deu ruim", err.message))
     }
@@ -35,7 +38,7 @@ export default function Register(props){
         <>
         <Header />
             
-                <Banner fotoBanner="assets/Images/banner-blog.jpg"titleBanner="Registre-se"  />
+                <Banner fotoBanner="assets/Images/banner-blog.jpg" titleBanner="Registre-se"  />
     
             <form className={styles.form} onSubmit={handleRegister}>
                 <div className={styles.fields}>

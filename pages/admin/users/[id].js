@@ -1,7 +1,6 @@
 import axios from 'axios'
 import { useRoute } from 'next/router'
 import serverUrl from '../../../utils/env'
-
 import Header from '../../../components/admin/Header'
 import styles from '../../../components/admin/Add.module.css'
 import Input from '../../../components/admin/Input'
@@ -13,7 +12,7 @@ const config = {
 
 export default function User(props){
     
-
+    const Router = useRoute()
     const handleFormData = async (event)=>{
         event.preventDefault()          
         let  formulario = new FormData(event.target)
@@ -21,9 +20,10 @@ export default function User(props){
             await axios.put(`${serverUrl}/admin/users/${props.user.id}`, formulario, config)
             .then((res)=>{
                 alert("Alterações feitas com Sucesso!")
-                window.location.href=("/admin/users")
+                Router.push("/admin/users")
             }).catch((err)=>{
                 alert("Deu ruim")
+                Router.push('/admin/users')
             })
     }
 

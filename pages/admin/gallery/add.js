@@ -4,13 +4,14 @@ import Button from '../../../components/Button'
 import styles from '../../../components/admin/Add.module.css'
 import axios from 'axios'
 import serverUrl from '../../../utils/env'
+import { useRouter } from 'next/router'
 
 const config = {
     header: "Content-Type: multipart/form-data"
 }
 
 export default function Add(){
- 
+    const Router = useRouter()
 
     const handleFormData = async e => {
             e.preventDefault()
@@ -20,7 +21,7 @@ export default function Add(){
             await axios.post(`${serverUrl}/admin/gallery`, formulario, config)
             .then((res)=>{
                 alert("Nova Imagem inserida no banco")
-                window.location.href=("/admin/gallery")
+                Router.push("/admin/gallery")
             }).catch((err)=>{
                 alert("Deu ruim")
             })
@@ -31,7 +32,7 @@ export default function Add(){
         <Header textHeader="Adicionar Foto na Galeria" >
     
             <form className={styles.form} onSubmit={handleFormData}>
-                <h2>Cadastra Foto</h2>
+                <h2>Cadastrar Foto</h2>
                 <div className={styles.fields}>
                         <img src="" />
                     <Input type="file" name="file"  label="Nova Foto"/>

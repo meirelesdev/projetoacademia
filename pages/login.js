@@ -1,4 +1,5 @@
 import axios from 'axios'
+import { useRouter } from 'next/router'
 import { useState } from 'react'
 import { Cookies } from 'react-cookie'
 import serverUrl from '../utils/env'
@@ -12,7 +13,7 @@ import Link from 'next/link'
 
 
 export default function Login() {
-
+    const Router = useRouter()
     const cookies = new Cookies();
     const cookiesUser = new Cookies();
     const cookiesType = new Cookies();
@@ -25,9 +26,9 @@ export default function Login() {
 
     }
 
-    const handleLogin = e => {
+    const handleLogin = async e => {
         e.preventDefault()
-        axios.post(`${serverUrl}/auths`, values)
+        await axios.post(`${serverUrl}/auths`, values)
             .then(
                 (res) => {
                     const tokenData = res.data.token
@@ -44,10 +45,12 @@ export default function Login() {
                                 const cookiesInfo = new Cookies();
                                 cookiesInfo.set('treinos', resposta)
                             })
-                            window.location.href = ("/studentAreaTable")
+                            Router.push("/studentAreaTable")
+                            // window.location.href = ("/studentAreaTable")
                             break;
                         case 1:
-                            window.location.href = ("/admin")//admin
+                            Router.push('/admin')
+                            // window.location.href = ("/admin")//admin
                             break;
                         default:
                             alert('erro fatal,contate um administrador')
@@ -63,7 +66,7 @@ export default function Login() {
         <>
             <Header />
 
-            <Banner fotoBanner="assets/Images/banner-blog.jpg" />
+            <Banner fotoBanner="/assets/Images/banner-blog.jpg" titleBanner="Login" />
             <form className={styles.form} onSubmit={handleLogin}>
                 <div className={styles.fields}>
                     <Input type="email" name="email" required={true} onChange={handleInputChange} onFocus={handleInputChange} label="Seu E-mail" />

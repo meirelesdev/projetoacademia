@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { useRoute } from 'next/router'
+import { useRouter } from 'next/router'
 import { useState } from 'react' 
 
 import serverUrl from '../../../utils/env'
@@ -14,7 +14,7 @@ const config = {
 }
 
 export default function Posts(props){
-    
+    const Router = useRouter()
 
     const handleFormData = async (event)=>{
         event.preventDefault()
@@ -24,7 +24,7 @@ export default function Posts(props){
             await axios.put(`${serverUrl}/admin/posts/${props.post.id}`, formulario, config)
             .then((res)=>{
                 alert("Alterações feitas com Sucesso!")
-                window.location.href=("/admin/posts")
+                Router.push("/admin/posts")
             }).catch((err)=>{
                 alert("Deu ruim")
             })

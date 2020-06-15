@@ -1,10 +1,11 @@
 import styles from './Button.module.css'
-import Router from 'next/router'
+import { useRouter } from 'next/router'
 import axios from 'axios'
 import serverUrl from '../../utils/env'
 
 
 export default function Button(props){
+    const Router = useRouter()
     const handleClick = async e=>{
         switch(props.action) {
             case "Adicionar":

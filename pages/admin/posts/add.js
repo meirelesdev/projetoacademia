@@ -4,14 +4,17 @@ import Button from '../../../components/Button'
 import styles from '../../../components/admin/Add.module.css'
 import axios from 'axios'
 import serverUrl from '../../../utils/env'
+import { useRouter } from 'next/router'
 
 const config = {
     header: "Content-Type: multipart/form-data"
 }
 
 export default function Add(){
- 
-     const handleFormData = async e => {
+  
+    const Router = useRouter()
+  
+    const handleFormData = async e => {
             e.preventDefault()
           
         let  formulario = new FormData(e.target)
@@ -19,10 +22,10 @@ export default function Add(){
             await axios.post(`${serverUrl}/admin/posts`, formulario, config)
             .then((res)=>{
                 alert("Novo post salvo")
-                window.location.href=("/admin/posts")
+                Router.push("/admin/posts")
             }).catch((err)=>{
                 alert("Deu ruim")
-                window.location.href=("/admin/posts")
+                Router.push("/admin/posts")
             })
     }   
 

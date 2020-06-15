@@ -3,13 +3,14 @@ import Input from '../../../components/admin/Input'
 import Button from '../../../components/Button'
 import styles from '../../../components/admin/Add.module.css'
 import { useState } from 'react'
+import { useRouter } from 'next/router'
 import axios from 'axios'
 import serverUrl from '../../../utils/env'
 
 
 
 export default function Add({ training}){
-    
+    const Router = useRouter()
     const [values, setValues ] = useState({name:'', email:'',password:'', isAdmin:'', photo:'user.png', type_training:''})
 
     const handleInputChange = e => {
@@ -24,7 +25,7 @@ export default function Add({ training}){
         const user = await axios.post(`${serverUrl}/users`, values)
         if(user.data){
             alert(`Usuario ${user.data.name} Salvo com sucesso`)
-            window.location.href=('/admin/users')
+            Router.push('/admin/users')
         }
     }
     return(

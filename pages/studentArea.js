@@ -2,6 +2,7 @@ import Footer from '../components/Footer'
 import Header from '../components/Header'
 import Input from '../components/Input'
 import styles from '../components/Studentarea.module.css'
+import serverUrl from '../utils/env'
 import Head from 'next/head'
 import Button from '../components/Button'
 import React, { useState } from 'react'
@@ -26,10 +27,11 @@ export default function Studentarea() {
         
     }
 
-    const handleFormSubmit = e => {
+    const handleFormSubmit = async e => {
         e.preventDefault()
         //console.log(values)
-        axios.post('http://localhost:3333/auths', values)
+
+        await axios.post(`${serverUrl}/auths`, values)
             .then(
                 (res) => {
                    // console.log(res)
@@ -37,7 +39,7 @@ export default function Studentarea() {
                     const user = res.data.user["name"]
                     console.log(user)
                     const isAdmin = res.data.user.isAdmin
-                    //console.log('isadmin ',isAdmin)
+                    console.log('isadmin ',isAdmin)
                     cookies.set('token', tokenData)
                     cookiesUser.set('user', user)
                     alert("Seja bem vindo! " + values.email)
