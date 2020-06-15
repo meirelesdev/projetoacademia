@@ -13,6 +13,7 @@ import Link from 'next/link'
 
 
 export default function Login() {
+
     const Router = useRouter()
     const cookies = new Cookies();
     const cookiesUser = new Cookies();
@@ -41,9 +42,15 @@ export default function Login() {
                     switch (isAdmin) {
                         case 0:
                             axios.get(`${serverUrl}/trainings/${typet}`).then((res) => {
-                                const resposta = res.data
-                                const cookiesInfo = new Cookies();
-                                cookiesInfo.set('treinos', resposta)
+                                //console.log(res.data[0].name_training)
+                                const description = res.data[0].description
+                                const nametraining = res.data[0].name_training
+
+                                localStorage.setItem('name_training', nametraining)
+                                localStorage.setItem('description', description)
+                                //const cookiesInfo = new Cookies();
+                                //cookiesInfo.set('treinos', resposta)
+                                //console.log(cookiesInfo.cookies)
                             })
                             Router.push("/studentAreaTable")
                             // window.location.href = ("/studentAreaTable")

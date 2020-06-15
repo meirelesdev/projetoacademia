@@ -53,7 +53,7 @@ export default function Index({ posts }) {
                 {posts.map( (post , index) => (
                                     
                 <div key={index} className={styles.containerPost}>
-                <CompImg src={`${serverUrl}/posts/${post.id}/photo`} />
+                    <CompImg src={`${serverUrl}/posts/${post.id}/photo`} />
                     <div className={styles.contentPost}>
                         <Link href={`/posts/${post.id}/${post.slug}`} >
                             <a><h3>{post.title}</h3></a>

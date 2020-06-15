@@ -67,9 +67,9 @@ export default function Index(props) {
                 <section className={styles.messages}>
                 
                     {contacts.map((contact, i) => 
-                        // essa condição é para mostrar as msgs somente quando selecionada na lista, ou seja, "visible"
-                        visible[i] && <CardMessage key={i} id={contact.id} name={contact.name} email={contact.email} phone={contact.phone} message={contact.message} checked={answered[i] ? "checked": ""} onChange={() => handleClickAnswered(i,contact.id)} received={contact.created_at} updated={contact.updated_at}/>
-        
+                    <>
+                        { visible[i] && <CardMessage key={i} id={contact.id} name={contact.name} email={contact.email} phone={contact.phone} message={contact.message} checked={answered[i] ? "checked": ""} onChange={() => handleClickAnswered(i,contact.id)} received={contact.created_at} updated={contact.updated_at}/>}
+                    </>
                     ) }
 
                 </section> 
