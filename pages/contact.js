@@ -5,6 +5,9 @@ import Textarea from '../components/Textarea'
 import Button from '../components/Button'
 import styles from '../components/Contact.module.css'
 import Banner from '../components/Banner'
+import serverUrl from '../utils/env'
+import React, {useState} from 'react';
+import axios from 'axios';
 
 
 /* Idéia da estrutura final
@@ -20,6 +23,31 @@ import Banner from '../components/Banner'
 <Header />
 */
 export default function Contact() {
+
+    const [values, setValues] = useState({name: '', phone: '', email: '', message: ''})
+
+    const handleInputChange = e =>{
+        const {name, value} = e.target
+
+        setValues({...values, [name]:value})
+        console.log(name, value)
+    }
+
+    const handleFormSubmit = e =>{
+        e.preventDefault()
+        axios.post(`${serverUrl}/admin/contacts`, values)
+        .then(
+            (res)=> {
+                // console.log('Usuário autenticado!')
+                alert('Sua mensagem foi enviada com Sucesso!')
+                window.location.href=("/contact")
+            }
+        )
+        .catch(err => alert('Deu ruim', err.message))
+    }
+
+
+
     return(
         <>
         <Header/>
@@ -32,13 +60,13 @@ export default function Contact() {
                     <div className={styles.titleContact} >
                         <h1>Para maiores informações entre em contato com nossa equipe de atendimento. Teremos prazer em atender você.</h1>
                     </div>
-                    <form className={styles.form}>
+                    <form className={styles.form} onSubmit={handleFormSubmit}>
                         <div className={styles.fields}>
-                            <Input type="text" name="name" label="Nome Completo"/>
-                            <Input type="email" name="email" label="Email"/>
-                            <Input type="tel" name="phone" label="Celular"/>
+                            <Input type="text" name="name" label="Nome Completo" onChange={handleInputChange} onFocus={handleInputChange}/>
+                            <Input type="email" name="email" label="Email" onChange={handleInputChange} onFocus={handleInputChange} />
+                            <Input type="tel" name="phone" label="Celular" onChange={handleInputChange} onFocus={handleInputChange} />
                         </div>
-                        <Textarea name="message" label="Mensagem" /> 
+                        <Textarea name="message" label="Mensagem" onChange={handleInputChange} onFocus={handleInputChange} /> 
                         <Button text="Enviar"/>
                     </form>
                 </div>
