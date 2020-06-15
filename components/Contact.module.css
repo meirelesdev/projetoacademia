@@ -24,12 +24,7 @@
 .form {
     flex-direction: column;
     padding: 1em;
-<<<<<<< HEAD
     width: 95%;
-=======
-    box-sizing: border-box;
-    width: 100%;
->>>>>>> c526ed1d4e4873a08d3b3200c2d9efa706fc5bde
 }
 
 .form .fields {
@@ -144,10 +139,6 @@
     .imgContact{
         background-position-y: -40px;
     }
-<<<<<<< HEAD
-=======
-
->>>>>>> c526ed1d4e4873a08d3b3200c2d9efa706fc5bde
 }
 
 @media (min-width: 768px) {
