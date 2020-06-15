@@ -8,13 +8,14 @@ import Footer from '../components/Footer'
 import Input from '../components/Input'
 import Button from '../components/Button'
 import styles from '../components/Contact.module.css'
+import Link from 'next/link'
 
 
-export default function Login(){
+export default function Login() {
 
     const cookies = new Cookies();
     const cookiesUser = new Cookies();
-
+    const cookiesType = new Cookies();
     let [token, setToken] = useState(cookies.get('token') || null)
 
     const [values, setValues] = useState({ email: '', password: '' })
@@ -31,11 +32,18 @@ export default function Login(){
                 (res) => {
                     const tokenData = res.data.token
                     const user = res.data.user["name"]
+                    const typet = res.data.user["type_training"]
                     const isAdmin = res.data.user.isAdmin
                     cookies.set('token', tokenData)
                     cookiesUser.set('user', user)
+                    cookiesType.set('typet', typet)
                     switch (isAdmin) {
                         case 0:
+                            axios.get(`${serverUrl}/trainings/${typet}`).then((res) => {
+                                const resposta = res.data
+                                const cookiesInfo = new Cookies();
+                                cookiesInfo.set('treinos', resposta)
+                            })
                             window.location.href = ("/studentAreaTable")
                             break;
                         case 1:
@@ -54,17 +62,21 @@ export default function Login(){
     return (
         <>
             <Header />
+
             <Banner fotoBanner="assets/Images/banner-blog.jpg" />
             <form className={styles.form} onSubmit={handleLogin}>
                 <div className={styles.fields}>
-                    <Input type="email" name="email" onChange={handleInputChange} onFocus={handleInputChange} label="Seu E-mail" />
-                    <Input type="password" name="password" label="Senha" onChange={handleInputChange} onFocus={handleInputChange} />
+                    <Input type="email" name="email" required={true} onChange={handleInputChange} onFocus={handleInputChange} label="Seu E-mail" />
+                    <Input type="password" name="password" required={true} label="Senha" onChange={handleInputChange} onFocus={handleInputChange} />
                 </div>
                 <div>
-                    <a href="/register">Registre-se</a>
+                    <Link href="/register">
+                        <a >Registre-se</a>
+                    </Link>
                 </div>
                 <Button text="Logar" />
             </form>
+
             <Footer />
         </>
     )

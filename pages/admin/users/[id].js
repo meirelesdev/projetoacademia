@@ -45,6 +45,15 @@ export default function User(props){
                         <br/>
                         <Input type="number" min="0" max="1" name="isAdmin" label="Administrador?"  />
                         <br/>
+                        <select name="type_training" label="Tipo do treino">
+                            {props.training.length > 0 ? 
+                props.training.map((trainings, index)=>(
+                <option key={index} value={trainings.type_training}>{trainings.type_training}</option>
+                    ))
+                    
+            : <p>Sem treinamentos cadastrados</p>}
+                        </select>
+                        <br/>
                         </div>            
                         <Button text="Salvar Alterações"/>
                     </form>
@@ -57,11 +66,12 @@ User.getInitialProps = async ({query}) =>{
 
     const { id } = query
     let user = []
-
+    let training = []
     user = await axios.get(`${serverUrl}/admin/users/${id}`)
-
+    training = await axios.get(`${serverUrl}/training`)
     return {
         "user": user.data,
+        "training": training.data,
         "id": id
     }
 }
