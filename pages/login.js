@@ -32,6 +32,11 @@ export default function Login() {
         await axios.post(`${serverUrl}/auths`, values)
             .then(
                 (res) => {
+                    cookies.remove('token')
+                    cookies.remove('user')
+                    cookies.remove('typet')
+                    cookies.remove('name_training')
+                    cookies.remove('description')
                     const tokenData = res.data.token
                     const user = res.data.user["name"]
                     const typet = res.data.user["type_training"]
@@ -42,15 +47,13 @@ export default function Login() {
                     switch (isAdmin) {
                         case 0:
                             axios.get(`${serverUrl}/trainings/${typet}`).then((res) => {
-                                //console.log(res.data[0].name_training)
+    
                                 const description = res.data[0].description
                                 const nametraining = res.data[0].name_training
-
-                                localStorage.setItem('name_training', nametraining)
-                                localStorage.setItem('description', description)
-                                //const cookiesInfo = new Cookies();
-                                //cookiesInfo.set('treinos', resposta)
-                                //console.log(cookiesInfo.cookies)
+                                const cookiesName = new Cookies();
+                                cookiesName.set('name_training', nametraining)
+                                const cookiesDesc = new Cookies();
+                                cookiesName.set('description', description)
                             })
                             Router.push("/studentAreaTable")
                             // window.location.href = ("/studentAreaTable")

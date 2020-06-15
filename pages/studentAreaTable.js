@@ -14,9 +14,9 @@ export default function Studentareatable() {
     const [cookies, setCookie] = useCookies();
     const name = cookies.user
     const typet = cookies.typet
-    const nametreino = localStorage.getItem('name_training')
-    const desctreino = localStorage.getItem('description')
-      
+    
+    const nametreino = cookies.name_training
+    const desctreino = cookies.description
     return (
         <>
             <Header />

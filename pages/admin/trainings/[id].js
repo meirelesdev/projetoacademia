@@ -7,9 +7,7 @@ import styles from '../../../components/admin/Add.module.css'
 import Input from '../../../components/admin/Input'
 import Button from '../../../components/Button'
 
-const config = {
-    header: "Content-Type: multipart/form-data"
-}
+
 
 export default function Training(props){
     
@@ -18,10 +16,10 @@ export default function Training(props){
         event.preventDefault()          
         let  formulario = new FormData(event.target)
 
-            await axios.put(`${serverUrl}/admin/training/${props.trainings.id}`, formulario, config)
+            await axios.put(`${serverUrl}/admin/trainings/${props.trainings.id}`, formulario)
             .then((res)=>{
                 alert("Alterações feitas com Sucesso!")
-                window.location.href=("/admin/training")
+                window.location.href=("/admin")
             }).catch((err)=>{
                 alert("Deu ruim")
             })
