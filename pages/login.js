@@ -31,11 +31,11 @@ export default function Login() {
         await axios.post(`${serverUrl}/auths`, values)
             .then(
                 (res) => {
-                    const tokenData = res.data.token
+                    const { token } = res.data.token
                     const user = res.data.user["name"]
                     const typet = res.data.user["type_training"]
                     const isAdmin = res.data.user.isAdmin
-                    cookies.set('token', tokenData)
+                    cookies.set('token', token)
                     cookiesUser.set('user', user)
                     cookiesType.set('typet', typet)
                     switch (isAdmin) {

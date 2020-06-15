@@ -4,25 +4,20 @@ import Planos from '../components/Planos'
 import axios from 'axios'
 import serverUrl from '../utils/env'
 
-export async function getStaticProps() {
-
-    const resp = await axios.get(serverUrl + '/plans')
-
-    return {
-        props: {
-            listaPlanos: resp.data
-        }
-    }
-}
-
 function PagePlanos(props) {
     return (
         <>
             <Header/>
-                <Planos listaPlanos={props.listaPlanos}/>
+                <Planos listaPlanos={ props.plans }/>
             <Footer/>
         </>
     )
 }
+
+PagePlanos.getInitialProps = async ctx => {
+    const resp = await axios.get(serverUrl + '/plans')
+    return { plans: resp.data }
+}
+
 
 export default PagePlanos
